@@ -13,7 +13,7 @@ int main() {
     int yearYouWantKnow = 0;
     int totalPopUS = 0;
     
-    cout << "Please enter year which you want: "; // Asking to user
+    cout << "Please enter year which you want to know: "; // Asking to user
     cin >> yearYouWantKnow;
     totalPopUS = totalPopJan2017 + ((yearYouWantKnow - 2017) * (rateBirthYear + rateDeathYear + rateImmigrationYear + rateNetGainYear));
     cout << " In the year " << yearYouWantKnow << "," << " the total population will be " << totalPopUS << " persons in the United States.";
