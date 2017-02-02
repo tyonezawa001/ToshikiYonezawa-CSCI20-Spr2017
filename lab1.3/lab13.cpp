@@ -1,7 +1,6 @@
 // Created by: Toshiki Yonezawa
  // Created on: 02/02/2017
 
-
 #include <iostream>
 using namespace std;
 
