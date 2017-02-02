@@ -8,15 +8,17 @@ using namespace std;
 int main() {
     
     cout << endl;
+    cout << endl;
+    cout << "\\ Pooping Cat /" << endl;
     cout << " _" << endl;
     cout << "( \\" << endl;
     cout << " ) )" << endl;
     cout << "( (  .-**-.  A.-.A" << endl;
-    cout << " \\ \\/      \\/ , , \\" << endl;
-    cout << "  \\   \\    =;  t  /=" << endl;
-    cout << "   \\   |**.  ',--'" << endl;
-    cout << "    / //  | ||" << endl;
-    cout << "   /_,))  |_,))" << endl;
+    cout << " \\ \\/      \\/ @ @ \\" << endl;
+    cout << " '\\   \\    =;  t  /=" << endl;
+    cout << "'  \\   |**.  ',--'" << endl;
+    cout << "'   / //  | ||" << endl;
+    cout << "'  /_,))  |_,))" << endl;
     cout << endl;
     
 }
