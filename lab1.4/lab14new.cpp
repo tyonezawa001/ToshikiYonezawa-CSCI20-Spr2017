@@ -1,8 +1,17 @@
+// Created by:Toshiki Yonezawa
+// Created on: 02/08/2017
+// This programming is working as a change machine. 
+// When people enter some coins, the programming converts the coins to bills and coins. 
+
 #include <iostream>
 using namespace std;
 
 int main() {
     
+    int valueQuarters = 25; // value of quarters in cents
+    int valueDimes = 10; // value of dimes in cents
+    int valueNickels = 5; // value of nickels in cents
+    int valuePennies = 1; // value of pennies in cents
     int amountQuarters = 0;
     int amountDimes = 0;
     int amountNickels = 0;
@@ -15,15 +24,15 @@ int main() {
     
     cout << endl;
     cout << "Please enter the amount of cash in cents: ";
-    cin >> totalCashInCents;
+    cin >> totalCashInCents; // ask total numbers of cash in cents
     
-    amountQuarters = totalCashInCents / 25;
-    amountDimes = (totalCashInCents % 25) / 10;
-    amountNickels = ((totalCashInCents % 25) % 10) / 5;
-    amountPennies = ((totalCashInCents % 25) % 10) % 5;
+    amountQuarters = totalCashInCents / valueQuarters; // it gives numbers of coin about Quarters
+    amountDimes = (totalCashInCents % valueQuarters) / valueDimes; // it gives numbers of coin about Dimes
+    amountNickels = ((totalCashInCents % valueQuarters) % valueDimes) / valueNickels; // it gives numbers of coin about Dimes
+    amountPennies = (((totalCashInCents % valueQuarters) % valueDimes) % valueNickels) / valuePennies; // it gives numbers of coin about Pennies
     
-    totalCashInDollars = totalCashInCents / 100.0;
-    totalCashInDollarsAfterFee = totalCashInDollars * (1 - 0.108);
+    totalCashInDollars = totalCashInCents / 100.0; // it gives total cash values in Dollars, and also it can show deciaml numbers
+    totalCashInDollarsAfterFee = totalCashInDollars * (1 - 0.108); // the equation gives total cash for casutomor after subtract commission
     
     cout << endl;
     cout << "You have entered " << totalCashInCents << " cents." << endl;
