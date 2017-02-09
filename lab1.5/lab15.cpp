@@ -1,10 +1,11 @@
+
 /* Created by: Toshiki Yonezawa
  * Created on: 02/09/2017
  * You can play a mad lib using the program.
  * The mad lib is simple game to fill in the blank using any kinds of word you want on the paragraph.
  * I hope everyone enjoy to finish making my story using funny words.
  */
-
+ 
 #include <iostream>
 #include <string>
 using namespace std;
@@ -19,7 +20,7 @@ int main() {
     string placeForRecovery;
     string wordRelative;
     string thing;
-    int finalTimeForRecovery = 0;
+    string future;
     
     // input user's words
     cout << endl;
@@ -50,17 +51,17 @@ int main() {
     cout << "Please enter a name of something you want to put on here: " << endl;
     cin >> thing;
     
-    cout << "Please enter a number which in your brain now: " << endl;
-    cin >> finalTimeForRecovery;
+    cout << "Please foresee the future and explain your future in one word: " << endl;
+    cin >> future;
     
     // telling a story
     cout << endl;
     cout << "When " << mainCharacter << " was a child, " << mainCharacter << " suffered a serious injury to " << bodyPart << " from being stabbed with a " << deadlyWeapon << "." << endl;
     cout << mainCharacter << " thought the serious injury required " << timeForRecovery << " month for recovery." << endl;
-    cout << mainCharacter << " sensed that death was approaching because " << mainCharacter << " saw " << horribleThing << " in " << placeForRecovery << " everyday." << endl;
+    cout << "Before the happning, " << mainCharacter << " sensed that death was approaching because " << mainCharacter << " saw " << horribleThing << " in " << placeForRecovery << " everyday." << endl;
     cout << mainCharacter << " asked " << wordRelative << " about " << horribleThing << "." << endl;
     cout << wordRelative << " laughed out loud, and " << wordRelative << " explained " << horribleThing << " is just " << thing << "." << endl;
-    cout << "Finally, " << mainCharacter << " left the " << placeForRecovery << " after " << finalTimeForRecovery << " days." << endl;
+    cout << "Finally, " << mainCharacter << " thought " << horribleThing << " was an omen of " << future << "." << endl;
     
     return 0;
 }
