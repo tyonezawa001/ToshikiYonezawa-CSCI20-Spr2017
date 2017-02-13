@@ -1,9 +1,7 @@
 
-/* Created by: Toshiki Yonezawa
- * Created on: 02/09/2017
- * You can play a mad lib using the program.
- * The mad lib is simple game to fill in the blank using any kinds of word you want on the paragraph.
- * I hope everyone enjoy to finish making my story using funny words.
+/* Updated by: Toshiki Yonezawa
+ * Updated on: 02/13/2017
+ * The program is based on "Mad Libs" game, but it initiallized the variables to a default of my choice.
  */
  
 #include <iostream>
@@ -12,47 +10,16 @@ using namespace std;
 
 int main() {
     
-    string mainCharacter;
-    string bodyPart;
-    string deadlyWeapon;
-    int timeForRecovery = 0;
-    string horribleThing;
-    string placeForRecovery;
-    string wordRelative;
-    string thing;
-    string future;
-    
-    // input user's words
-    cout << endl;
-    cout << "Please enter words for this story without spaces." << endl;
-    cout << endl;
-    
-    cout << "Please enter a main character for the story: " << endl;
-    cin >> mainCharacter;
-    
-    cout << "Please enter a name of body part from your body: " << endl;
-    cin >> bodyPart;
-    
-    cout << "Please enter a name of weapon which you want to use: " << endl;
-    cin >> deadlyWeapon;
-    
-    cout << "Please enter your favorite positive integer: " << endl;
-    cin >> timeForRecovery;
-    
-    cout << "Please enter a thing you don't like: " << endl;
-    cin >> horribleThing;
-    
-    cout << "Please enter your favorite place: " << endl;
-    cin >> placeForRecovery;
-    
-    cout << "Please enter a kind of relative: " << endl;
-    cin  >> wordRelative;
-    
-    cout << "Please enter a name of something you want to put on here: " << endl;
-    cin >> thing;
-    
-    cout << "Please foresee the future and explain your future in one word: " << endl;
-    cin >> future;
+    // initialize the variables to a default of my choice
+    std::string mainCharacter("Toshiki");
+    std::string bodyPart("Brain");
+    std::string deadlyWeapon("Pencil");
+    std::string timeForRecovery("42");
+    std::string horribleThing("MassDictionary");
+    std::string placeForRecovery("ClassRoom");
+    std::string wordRelative("Mother");
+    std::string thing("Book");
+    std::string future("Death");
     
     // telling a story
     cout << endl;
