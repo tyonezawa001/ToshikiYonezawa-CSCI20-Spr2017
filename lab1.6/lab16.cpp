@@ -1,6 +1,7 @@
 /* Created by: Toshiki Yonezawa
  * Created on: 02/03/2017
  * I created a MonsterStruct with six characteristics of a monster.
+ * Program must output two monsters, and it explains about name and each body parts.
  */
 
 #include <iostream>
@@ -16,6 +17,8 @@ struct Monster {
 };
 
 int main() {
+    
+    // it explains each body parts of two monsters. 
     Monster OneMonster;
     OneMonster.Name = "OneMonster";
     OneMonster.Head = "Zombus";
@@ -32,6 +35,7 @@ int main() {
     TwoMonster.Nose = "Wackus";
     TwoMonster.Mouth = "Spritem";
     
+    // it outputs for each monsters.
     cout << endl;
     cout << OneMonster.Name << ": ";
     cout << OneMonster.Head << ", ";
