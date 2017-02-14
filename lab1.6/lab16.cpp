@@ -1,3 +1,8 @@
+/* Created by: Toshiki Yonezawa
+ * Created on: 02/03/2017
+ * I created a MonsterStruct with six characteristics of a monster.
+ */
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -23,12 +28,12 @@ int main() {
     TwoMonster.Name = "TwoMonster";
     TwoMonster.Head = "Franken";
     TwoMonster.Eyes = "Vegitas";
-    TwoMonster.Ears = "Spritem";
+    TwoMonster.Ears = "None";
     TwoMonster.Nose = "Wackus";
-    TwoMonster.Mouth = "Vegitas";
+    TwoMonster.Mouth = "Spritem";
     
     cout << endl;
-    cout << "MonsterOne: ";
+    cout << OneMonster.Name << ": ";
     cout << OneMonster.Head << ", ";
     cout << OneMonster.Eyes << ", ";
     cout << OneMonster.Ears << ", ";
@@ -36,7 +41,7 @@ int main() {
     cout << OneMonster.Mouth << endl;
     cout << endl;
      
-    cout << "MonsterTwo: ";
+    cout << TwoMonster.Name << ": ";
     cout << TwoMonster.Head << ", ";
     cout << TwoMonster.Eyes << ", ";
     cout << TwoMonster.Ears << ", ";
