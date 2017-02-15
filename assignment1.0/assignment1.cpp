@@ -23,13 +23,13 @@ int main() {
     double tax = 0.17; // each people pay 17% tax after paying insurance.
     
     // I input information about name, worked time, hourly wage.
-    // The program calcurates weekly gross pay and weekly pay
-    Wage jhonDoe;
-    jhonDoe.name = "Jhon Doe";
-    jhonDoe.workedTime = 6;
-    jhonDoe.hourlyWage = 8.50;
-    jhonDoe.weeklyGrossPay = jhonDoe.workedTime * jhonDoe.hourlyWage;
-    jhonDoe.weeklyNetPay = (jhonDoe.weeklyGrossPay - insurance) * (1.00 - tax);
+    // The program calculates weekly gross pay and weekly pay
+    Wage johnDoe;
+    johnDoe.name = "John Doe";
+    johnDoe.workedTime = 6;
+    johnDoe.hourlyWage = 8.50;
+    johnDoe.weeklyGrossPay = johnDoe.workedTime * johnDoe.hourlyWage;
+    johnDoe.weeklyNetPay = (johnDoe.weeklyGrossPay - insurance) * (1.00 - tax);
     
     Wage shaleseRay;
     shaleseRay.name = "Shalese Ray";
@@ -54,11 +54,11 @@ int main() {
     
     // Output information about each people
     cout << endl;
-    cout << jhonDoe.name << ": Working Hours: ";
-    cout << jhonDoe.workedTime << " hours / Hourly Wage: $";
-    cout << jhonDoe.hourlyWage << " / Weekly Gross Pay: $";
-    cout << jhonDoe.weeklyGrossPay << " / Weekly Net Pay: $";
-    cout << jhonDoe.weeklyNetPay << endl;
+    cout << johnDoe.name << ": Working Hours: ";
+    cout << johnDoe.workedTime << " hours / Hourly Wage: $";
+    cout << johnDoe.hourlyWage << " / Weekly Gross Pay: $";
+    cout << johnDoe.weeklyGrossPay << " / Weekly Net Pay: $";
+    cout << johnDoe.weeklyNetPay << endl;
     
     cout << endl;
     cout << shaleseRay.name << ": Working Hours: ";
