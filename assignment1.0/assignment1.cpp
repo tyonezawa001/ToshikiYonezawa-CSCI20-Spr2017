@@ -9,6 +9,7 @@
 #include <string>
 using namespace std;
 struct Wage {
+    
     string name;
     int workedTime;
     double hourlyWage;
@@ -23,7 +24,7 @@ int main() {
     double tax = 0.17; // each people pay 17% tax after paying insurance.
     
     // I input information about name, worked time, hourly wage.
-    // The program calculates weekly gross pay and weekly pay
+    // The program calculate weekly gross pay and weekly pay
     Wage johnDoe;
     johnDoe.name = "John Doe";
     johnDoe.workedTime = 6;
@@ -84,3 +85,12 @@ int main() {
     return 0;
     
 }
+
+/* John Doe: Working Hours: 6 hours / Hourly Wage: $8.5 / Weekly Gross Pay: $51 / Weekly Net Pay: $-65.57
+
+ * Shalese Ray: Working Hours: 40 hours / Hourly Wage: $15 / Weekly Gross Pay: $600 / Weekly Net Pay: $390.1
+
+ * Alivia Hope: Working Hours: 20 hours / Hourly Wage: $25.15 / Weekly Gross Pay: $503 / Weekly Net Pay: $309.59
+
+ * Jazzy Kerber: Working Hours: 27 hours / Hourly Wage: $10 / Weekly Gross Pay: $270 / Weekly Net Pay: $116.2
+ */
