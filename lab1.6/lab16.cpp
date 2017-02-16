@@ -30,40 +30,52 @@ int main() {
     Monster OneMonster;
     cout << "Please decide the name for Monster One: "; 
     cin >> OneMonster.Name;
+    cout << endl;
     
     cout << "Please decide the Head for " << OneMonster.Name << "!";
     cin >> OneMonster.Head;
+    cout << endl;
     
     cout << "Please decide the Eyes for " << OneMonster.Name << "!";
     cin >> OneMonster.Eyes;
+    cout << endl;
     
     cout << "Please decide the Ears for " << OneMonster.Name << "!";
     cin >> OneMonster.Ears;
+    cout << endl;
     
     cout << "Please enter the Nose for " << OneMonster.Name << "!"; 
     cin >> OneMonster.Nose;
+    cout << endl;
     
     cout << "Please enter the Mouth for " << OneMonster.Name << "!";
     cin >> OneMonster.Mouth;
+    cout << endl;
     
     Monster TwoMonster;
-    cout << "Please decide the name for Monster One: "; 
+    cout << "Please decide the name for Monster Two: "; 
     cin >> TwoMonster.Name;
+    cout << endl;
     
     cout << "Please decide the Head for " << TwoMonster.Name << "!";
     cin >> TwoMonster.Head;
+    cout << endl;
     
     cout << "Please decide the Eyes for " << TwoMonster.Name << "!";
     cin >> TwoMonster.Eyes;
+    cout << endl;
     
     cout << "Please decide the Ears for " << TwoMonster.Name << "!";
     cin >> TwoMonster.Ears;
+    cout << endl;
     
     cout << "Please enter the Nose for " << TwoMonster.Name << "!"; 
     cin >> TwoMonster.Nose;
+    cout << endl;
     
     cout << "Please enter the Mouth for " << TwoMonster.Name << "!";
     cin >> TwoMonster.Mouth;
+    cout << endl;
     
     // it outputs for each monsters.
     cout << endl;
