@@ -18,22 +18,52 @@ struct Monster {
 
 int main() {
     
+    cout << endl;
+    cout << "Please enter the characteristics of two of the monster!" << endl;
+    cout << endl;
+    cout << "You can freely name for each monsters." << endl;
+    cout << endl;
+    cout << "You can choose the characteristics from Zombus, Spritem, Vegitas, Wackus and None." << endl;
+    cout << endl;
+    
     // it explains each body parts of two monsters. 
     Monster OneMonster;
-    OneMonster.Name = "OneMonster";
-    OneMonster.Head = "Zombus";
-    OneMonster.Eyes = "Spritem";
-    OneMonster.Ears = "Vegitas";
-    OneMonster.Nose = "None";
-    OneMonster.Mouth = "Wackus";
+    cout << "Please decide the name for Monster One: "; 
+    cin >> OneMonster.Name;
+    
+    cout << "Please decide the Head for " << OneMonster.Name << "!";
+    cin >> OneMonster.Head;
+    
+    cout << "Please decide the Eyes for " << OneMonster.Name << "!";
+    cin >> OneMonster.Eyes;
+    
+    cout << "Please decide the Ears for " << OneMonster.Name << "!";
+    cin >> OneMonster.Ears;
+    
+    cout << "Please enter the Nose for " << OneMonster.Name << "!"; 
+    cin >> OneMonster.Nose;
+    
+    cout << "Please enter the Mouth for " << OneMonster.Name << "!";
+    cin >> OneMonster.Mouth;
     
     Monster TwoMonster;
-    TwoMonster.Name = "TwoMonster";
-    TwoMonster.Head = "Franken";
-    TwoMonster.Eyes = "Vegitas";
-    TwoMonster.Ears = "None";
-    TwoMonster.Nose = "Wackus";
-    TwoMonster.Mouth = "Spritem";
+    cout << "Please decide the name for Monster One: "; 
+    cin >> TwoMonster.Name;
+    
+    cout << "Please decide the Head for " << TwoMonster.Name << "!";
+    cin >> TwoMonster.Head;
+    
+    cout << "Please decide the Eyes for " << TwoMonster.Name << "!";
+    cin >> TwoMonster.Eyes;
+    
+    cout << "Please decide the Ears for " << TwoMonster.Name << "!";
+    cin >> TwoMonster.Ears;
+    
+    cout << "Please enter the Nose for " << TwoMonster.Name << "!"; 
+    cin >> TwoMonster.Nose;
+    
+    cout << "Please enter the Mouth for " << TwoMonster.Name << "!";
+    cin >> TwoMonster.Mouth;
     
     // it outputs for each monsters.
     cout << endl;
@@ -52,7 +82,7 @@ int main() {
     cout << TwoMonster.Nose << ", ";
     cout << TwoMonster.Mouth << endl;
     cout << endl;
-     
+    
 return 0;
      
 }
