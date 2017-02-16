@@ -8,6 +8,8 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
+// Making a struct variables about name, worked Time, hourly Wage, weekly Gross pay and weekly Net pay 
 struct Wage {
     
     string name;
