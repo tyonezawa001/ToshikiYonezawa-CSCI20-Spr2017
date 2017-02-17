@@ -1,3 +1,4 @@
+
 /*
  * Created by: Toshiki Yonezawa
  * Created on: 02/16/2017
@@ -6,7 +7,7 @@
  * Output provides wind speed, old wind chill indox, new wind chill indox and difference between the two data.
  */
 
-include <iostream>
+#include <iostream>
 #include <math.h>
 using namespace std;
 
@@ -53,3 +54,37 @@ int main() {
     return 0;
     
 }
+
+/*
+ * --------------------
+ 
+ * Wind Speed: 4 mph
+
+ * Old Wind Chill Index: 30.5753 F
+
+ * New Wind Chill Index: 25.767 F
+
+ * Difference between Two Data: 4.8083 F
+
+ * --------------------
+
+ * Wind Speed: 10 mph
+
+ * Old Wind Chill Index: 27.8601 F
+
+ * New Wind Chill Index: 32.713 F
+
+ * Difference between Two Data: -4.85286 F
+
+ * --------------------
+
+ * Wind Speed: 2 mph
+
+ * Old Wind Chill Index: 98.7538 F
+
+ * New Wind Chill Index: 105.711 F
+
+ * Difference between Two Data: -6.95719 F
+
+ * --------------------
+ */
