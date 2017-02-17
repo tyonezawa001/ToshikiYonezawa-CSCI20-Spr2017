@@ -28,19 +28,19 @@ int main() {
     
     // it explains each body parts of two monsters. 
     Monster OneMonster;
-    cout << "Please decide the name for Monster One: "; 
+    cout << "Please enter the name for Monster One: "; 
     cin >> OneMonster.Name;
     cout << endl;
     
-    cout << "Please decide the Head for " << OneMonster.Name << "!";
+    cout << "Please enter the Head for " << OneMonster.Name << "!";
     cin >> OneMonster.Head;
     cout << endl;
     
-    cout << "Please decide the Eyes for " << OneMonster.Name << "!";
+    cout << "Please enter the Eyes for " << OneMonster.Name << "!";
     cin >> OneMonster.Eyes;
     cout << endl;
     
-    cout << "Please decide the Ears for " << OneMonster.Name << "!";
+    cout << "Please enter the Ears for " << OneMonster.Name << "!";
     cin >> OneMonster.Ears;
     cout << endl;
     
@@ -53,19 +53,19 @@ int main() {
     cout << endl;
     
     Monster TwoMonster;
-    cout << "Please decide the name for Monster Two: "; 
+    cout << "Please enter the name for Monster Two: "; 
     cin >> TwoMonster.Name;
     cout << endl;
     
-    cout << "Please decide the Head for " << TwoMonster.Name << "!";
+    cout << "Please enter the Head for " << TwoMonster.Name << "!";
     cin >> TwoMonster.Head;
     cout << endl;
     
-    cout << "Please decide the Eyes for " << TwoMonster.Name << "!";
+    cout << "Please enter the Eyes for " << TwoMonster.Name << "!";
     cin >> TwoMonster.Eyes;
     cout << endl;
     
-    cout << "Please decide the Ears for " << TwoMonster.Name << "!";
+    cout << "Please enter the Ears for " << TwoMonster.Name << "!";
     cin >> TwoMonster.Ears;
     cout << endl;
     
