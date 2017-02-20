@@ -20,9 +20,11 @@ struct Wage {
 
 int main() {
     
-    string workerName;
-    int workingHours = 0;
-    double timeWhage = 0;
+    Wage worker;
+    worker.name; 
+    worker.workedTime = 0;
+    worker.hourlyWage = 0;
+    
     double weeklyGrossPay = 0;
     double weeklyNetPay = 0;
     double insurance = 130; // each people pay $130 about insurance.
@@ -32,19 +34,14 @@ int main() {
     // The program calculate weekly gross pay and weekly pay.
     cout << endl;
     cout << "Please write a worker's name like Jhon_Doe: ";
-    cin >> workerName;
+    cin >> worker.name;
     cout << endl;
-    cout << "Please write working hours in positive numbers for " << workerName << ": ";
-    cin >> workingHours;
+    cout << "Please write working hours in positive numbers for " << worker.name << ": ";
+    cin >> worker.workedTime;
     cout << endl;
-    cout << "Please write hourly wage in dollars and cents like 8.5 for " << workerName << ": ";
-    cin >> timeWhage;
+    cout << "Please write hourly wage in dollars and cents like 8.5 for " << worker.name << ": ";
+    cin >> worker.hourlyWage;
     cout << endl;
-    
-    Wage worker;
-    worker.name = workerName; 
-    worker.workedTime = workingHours;
-    worker.hourlyWage = timeWhage;
     
     // Calculation for weekly Gross and Net Pay
     weeklyGrossPay = worker.workedTime * worker.hourlyWage;
