@@ -1,5 +1,5 @@
-/* Created by: Toshiki Yonezawa
- * Created on: 02/03/2017
+/* Updated by: Toshiki Yonezawa
+ * Updated on: 02/19/2017
  * I created a MonsterStruct with six characteristics of a monster.
  * Program must output two monsters, and it explains about name and each body parts.
  */
