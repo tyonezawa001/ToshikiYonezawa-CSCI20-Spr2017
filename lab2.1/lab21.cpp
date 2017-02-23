@@ -13,8 +13,8 @@ using namespace std;
 
 int main() {
     
+    double windSpeed = 0;
     double temperature = 0;
-    int windSpeed = 0;
     double oldStyleWindChill = 0;
     double newStyleWindChill = 0;
     double difference = 0;
