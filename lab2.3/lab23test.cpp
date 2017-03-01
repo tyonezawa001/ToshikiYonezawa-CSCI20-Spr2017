@@ -38,3 +38,9 @@ int main() {
     return 0;
     
 }
+
+// Random number between 1 and 10 is 2.
+
+// Random number between 5 and 82 is 66.
+
+// Random number between 22 and 73 is 54.
