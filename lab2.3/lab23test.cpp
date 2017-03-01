@@ -1,8 +1,16 @@
+/*
+ *Created by:Toshiki Yonezawa
+ *Created on:02/28/2017
+ *This program is working as random number generator.
+ *I made this one for just practicing to use parametors.
+ */
+
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
 using namespace std;
 
+// It works as random number generator, but input number must input small one to big one.
 void randomGenerator(int x, int y) {
     
     cout << endl;
@@ -28,6 +36,7 @@ void randomGenerator(int x, int y) {
     
 }
 
+// This part is main body of the program.
 int main() {
     
     int x = 0;

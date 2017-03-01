@@ -23,7 +23,7 @@ void randomGenerator(int x, int y, int z, int a, int b, int c) {
     srand(time(0));
     c = (rand() % b ) + a;
     
-    cout << "Random number between " << x << " and " << y << " is " << c << ".";
+    cout << "Random number between " << a << " and " << b << " is " << c << ".";
     cout << endl;
     
     return;
@@ -56,3 +56,9 @@ int main() {
     
     return 0;
 }
+
+// Random number between 1 and 10 is 8.
+
+// Random number between 5 and 82 is 67.
+
+// Random number between 22 and 73 is 48.
