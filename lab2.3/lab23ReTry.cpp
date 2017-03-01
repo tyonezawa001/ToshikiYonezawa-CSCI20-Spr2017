@@ -39,11 +39,11 @@ int main() {
     int randomNum;
     
     cout << endl;
-    cout << "Welcome to Random Number Generator Ver1.2" << endl;
+    cout << "Toshiki: Welcome to Random Number Generator Ver1.1!" << endl;
     cout << endl;
-    cout << "I will randomly choose only one number for you." << endl;
+    cout << "Toshiki: I will randomly choose only one number for you." << endl;
     cout << endl;
-    cout << "Please input two numbers which will be a range for the generator." << endl;
+    cout << "Toshiki; Please input two numbers which will be a range for the generator." << endl;
     cout << endl;
     cout << "1st Number: ";
     cin >> firstNum;
@@ -52,14 +52,23 @@ int main() {
     cin >> secondNum;
     cout << endl;
     
-    if (firstNum > secondNum) // it is for compareing the two input numbers about huge and small. 
-    swapFunction(firstNum, secondNum);
+    // it is for compareing the two input numbers about huge and small.
+    if (firstNum > secondNum) {
+        
+        (firstNum, secondNum);
+        
+        randomNumGenerator(firstNum, secondNum, randomNum);
+        
+    } 
+    else {
+        
+        randomNumGenerator(firstNum, secondNum, randomNum);
+        
+    }
     
-    randomNumGenerator(firstNum, secondNum, randomNum);
-    
-    cout << "Random number between " << firstNum << " and " << secondNum << " is " << randomNum << "." << endl;
+    cout << "Toshiki: Random number between " << firstNum << " and " << secondNum << " is " << randomNum << "." << endl;
     cout << endl;
-    cout << "Thank you for using the program." << endl;
+    cout << "Toshiki: Thank you for using the program! See you next time!" << endl;
     cout << endl;
     
     return 0;
