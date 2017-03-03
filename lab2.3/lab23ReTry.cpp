@@ -52,19 +52,10 @@ int main() {
     cin >> secondNum;
     cout << endl;
     
-    // it is for compareing the two input numbers about huge and small.
-    if (firstNum > secondNum) {
-        
-        (firstNum, secondNum);
-        
-        randomNumGenerator(firstNum, secondNum, randomNum);
-        
-    } 
-    else {
-        
-        randomNumGenerator(firstNum, secondNum, randomNum);
-        
-    }
+    if (firstNum > secondNum) // it is for compareing the two input numbers about huge and small. 
+    swapFunction(firstNum, secondNum);
+    
+    randomNumGenerator(firstNum, secondNum, randomNum);
     
     cout << "Toshiki: Random number between " << firstNum << " and " << secondNum << " is " << randomNum << "." << endl;
     cout << endl;
