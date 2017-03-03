@@ -67,8 +67,6 @@ int main() {
     cout << endl;
     cout << "Toshiki: After that, I wil convert to the value of pounds using the value of kilogram." << endl;
     cout << endl;
-    cout << "Toshiki: Do you think it is no meaning? Don't too much think about that! Just I want to do that!" << endl;
-    cout << endl;
     cout << "Toshiki; Please input two numbers which will be a range for the generator." << endl;
     cout << endl;
     cout << "1st Number: ";
