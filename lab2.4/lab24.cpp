@@ -11,8 +11,8 @@
 #include <math.h>
 using namespace std;
 
-double lbInKilo = 0.454; // it scopes the program.
-double killoInLb = 2.2; // it  scopes the program.
+const double lbInKilo = 0.454; // it scopes the program.
+const double killoInLb = 2.2; // it  scopes the program.
 
 // swap function for replacement of variables about two input numbers
 void swapFunction(int &firstNum, int &secondNum) {
