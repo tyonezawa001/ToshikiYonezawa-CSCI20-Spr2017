@@ -5,20 +5,20 @@ using namespace std;
 
 class BookInfo {
     public:
-       void SetTittle(string tittle);
-       void SetAuthor(string author);
-       void SetCopyrightYear(int copyrightYear);
+       string SetTittle(string tittle);
+       string SetAuthor(string author);
+       int SetCopyrightYear(int copyrightYear);
 };
 
-void BookInfo::SetTittle(char tittle) {
+string BookInfo::SetTittle(char tittle) {
     return;
 }
 
-void BookInfo::SetAuthor(char author) {
+string BookInfo::SetAuthor(char author) {
     return;
 }
 
-void SetCopyrightYear(int copyrightYear) {
+int SetCopyrightYear(int copyrightYear) {
     return;
 }
 
@@ -37,19 +37,10 @@ int main() {
     cout << endl;
     cout << "Toshiki: Please type a tittle, an author, and a copyright year about the five books." << endl;
     cout << endl;
-    cout << "Tittle1: ";
-    cin >> tittle1;
-    cout << endl;
-    cout << "Author1: ";
-    cin >> author1;
-    cout << endl;
-    cout << "Copyright Year1: ";
-    cin >> copyrightYear1;
-    cout << endl;
     
-    book1.SetTittle(tittle1);
-    book1.SetAuthor(author1);
-    book1.SetCopyrightYear(copyrightYear1);
+    book1.SetTittle("1");
+    book1.SetAuthor("1");
+    book1.SetCopyrightYear("1");
     
     cout << endl;
     cout << "Book is " << book1.SetTittle(tittle1) << "." << endl;
