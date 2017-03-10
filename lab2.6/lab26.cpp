@@ -1,3 +1,12 @@
+/*
+ *Created by: Toshiki Yonezawa
+ *Created on: 03/09/2017
+ *This program works as temperature converter, and it contains three different types of converter.
+ *1st one converts kelvin data to celsius and fahrenheit data.
+ *2nd one converts celsius data to kelvin and fahrenheit data.
+ *3rd one converts fahrenheit data to kelvin and celsius data. 
+ */
+
 #include <iostream>
 using namespace std;
 
@@ -11,7 +20,7 @@ class TemperatureConverter {
        double GetTempFromKelvin() const;
        double GetTempAsCelsius() const;
        double GetTempAsFahrenheit() const;
-       void PrintTemperatures(double a, double b, double c);
+       void PrintTemperatures(double dataKelvin, double dataCelsius, double dataFahrenheit);
        TemperatureConverter();
 };
 
@@ -47,11 +56,11 @@ double TemperatureConverter::GetTempAsFahrenheit() const {
     return ((9 * (kelvin_ - 273.15)) / 5) + 32;
 }
 
-void TemperatureConverter::PrintTemperatures(double a, double b, double c) {
+void TemperatureConverter::PrintTemperatures(double dataKelvin, double dataCelsius, double dataFahrenheit) {
     cout << endl;
-    cout << "Kelvin: " << a << endl;
-    cout << "Celcius: " << b << endl;
-    cout << "Fahrenheit: " << c << endl;
+    cout << "Kelvin: " << dataKelvin << endl;
+    cout << "celsius: " << dataCelsius << endl;
+    cout << "Fahrenheit: " << dataFahrenheit << endl;
     cout << endl;
     return;
 }
@@ -62,9 +71,9 @@ int main() {
     double kelvin = 0;
     double celsius = 0;
     double fahrenheit = 0;
-    double a = 0;
-    double b = 0;
-    double c = 0;
+    double dataKelvin = 0;
+    double dataCelsius = 0;
+    double dataFahrenheit = 0;
     
     cout << endl;
     cout << "Toshiki: This program is working as temperature converter." << endl;
@@ -87,13 +96,13 @@ int main() {
         
         type1.SetTempFromKelvin(kelvin);
         
-        a = kelvin;
+        dataKelvin = kelvin;
         
-        b = type1.GetTempAsCelsius();
+        dataCelsius = type1.GetTempAsCelsius();
         
-        c = type1.GetTempAsFahrenheit();
+        dataFahrenheit = type1.GetTempAsFahrenheit();
         
-        type1.PrintTemperatures(a, b, c);
+        type1.PrintTemperatures(dataKelvin, dataCelsius, dataFahrenheit);
     }
     
     if (ask == 2) {
@@ -105,13 +114,13 @@ int main() {
         
         type2.SetTempFromCelsius(celsius);
         
-        a = type2.GetTempFromKelvin();
+        dataKelvin = type2.GetTempFromKelvin();
         
-        b = celsius;
+        dataCelsius = celsius;
         
-        c = type2.GetTempAsFahrenheit();
+        dataFahrenheit = type2.GetTempAsFahrenheit();
         
-        type2.PrintTemperatures(a, b, c);
+        type2.PrintTemperatures(dataKelvin, dataCelsius, dataFahrenheit);
     }
 
     if (ask == 3) {
@@ -123,16 +132,14 @@ int main() {
         
         type3.SetTempFromFahrenheit(fahrenheit);
         
-        a = type3.GetTempFromKelvin();
+        dataKelvin = type3.GetTempFromKelvin();
         
-        b = type3.GetTempAsCelsius();
+        dataCelsius = type3.GetTempAsCelsius();
         
-        c = fahrenheit;
+        dataFahrenheit = fahrenheit;
         
-        type3.PrintTemperatures(a, b, c);
+        type3.PrintTemperatures(dataKelvin, dataCelsius, dataFahrenheit);
     }
-    
-    return 0;
     
 }
 
