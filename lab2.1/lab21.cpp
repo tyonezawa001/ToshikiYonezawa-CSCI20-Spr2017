@@ -66,7 +66,7 @@ int main() {
 
  * Difference between Two Data: 4.8083 F
 
- * --------------------
+ * ---------------------
 
  * Wind Speed: 10 mph
 
@@ -76,7 +76,7 @@ int main() {
 
  * Difference between Two Data: -4.85286 F
 
- * --------------------
+ * ---------------------
 
  * Wind Speed: 2 mph
 
@@ -86,5 +86,5 @@ int main() {
 
  * Difference between Two Data: -6.95719 F
 
- * --------------------
+ * ---------------------
  */

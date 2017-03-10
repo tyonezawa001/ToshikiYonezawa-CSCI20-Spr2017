@@ -1,7 +1,7 @@
 /*
  *Created by: Toshiki Yonezawa
  *Created on: 02/23/2017
- *This program will be randomly choosing a one number from 1 to 100. 
+ *This program will be randomly choosing one number from 1 to 100. 
  */
 
 #include <iostream>
