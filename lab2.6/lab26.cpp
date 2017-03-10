@@ -108,7 +108,7 @@ int main() {
     
     if (ask == 2) {
         cout << endl;
-        cout << "Toshiki Please input your data as celsius: ";
+        cout << "Toshiki: Please input your data as celsius: ";
         cin >> celsius;
         
         TemperatureConverter type2;
