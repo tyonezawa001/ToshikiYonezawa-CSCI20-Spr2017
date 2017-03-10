@@ -59,22 +59,22 @@ double TemperatureConverter::GetTempAsFahrenheit() const { // GetTempAsFahrenhei
 
 void TemperatureConverter::PrintTemperatures(double dataKelvin, double dataCelsius, double dataFahrenheit) { // prints the value as kelvin, celsius and fahrenheit.
     cout << endl;
-    cout << "Kelvin: " << dataKelvin << endl;
-    cout << "celsius: " << dataCelsius << endl;
-    cout << "Fahrenheit: " << dataFahrenheit << endl;
+    cout << "Kelvin: " << dataKelvin << " K" << endl;
+    cout << "celsius: " << dataCelsius << " °C" << endl;
+    cout << "Fahrenheit: " << dataFahrenheit << " °F" << endl;
     cout << endl;
     return;
 }
 
 int main() {
     
-    int ask = 0;
-    double kelvin = 0;
-    double celsius = 0;
-    double fahrenheit = 0;
-    double dataKelvin = 0;
-    double dataCelsius = 0;
-    double dataFahrenheit = 0;
+    int ask;
+    double kelvin;
+    double celsius;
+    double fahrenheit;
+    double dataKelvin;
+    double dataCelsius;
+    double dataFahrenheit;
     
     cout << endl;
     cout << "Toshiki: This program is working as temperature converter." << endl;
@@ -82,15 +82,15 @@ int main() {
     cout << "Toshiki: I will convert your input data to use different units." << endl;
     cout << endl;
     cout << "What kinds of temperature data you have?" << endl;
-    cout << "If you have kelvin data, please type 1." << endl;
-    cout << "If you have celsius data, please type 2." << endl;
-    cout << "If you have fahrenheit data, please type 3." << endl;
+    cout << "If you have kelvin(K) data, please type 1." << endl;
+    cout << "If you have celsius(°C) data, please type 2." << endl;
+    cout << "If you have fahrenheit(°F) data, please type 3." << endl;
     cout << "Data Type: ";
     cin >> ask;
     
     if (ask == 1) {
         cout << endl;
-        cout << "Toshiki: Please input your data as kelvin: ";
+        cout << "Toshiki: Please input your data as kelvin(K): ";
         cin >> kelvin;
         
         TemperatureConverter type1;
@@ -108,7 +108,7 @@ int main() {
     
     if (ask == 2) {
         cout << endl;
-        cout << "Toshiki: Please input your data as celsius: ";
+        cout << "Toshiki: Please input your data as celsius(°C): ";
         cin >> celsius;
         
         TemperatureConverter type2;
@@ -126,7 +126,7 @@ int main() {
 
     if (ask == 3) {
         cout << endl;
-        cout << "Toshiki: Please input your data as fahrenheit: ";
+        cout << "Toshiki: Please input your data as fahrenheit(°F): ";
         cin >> fahrenheit;
         
         TemperatureConverter type3;
