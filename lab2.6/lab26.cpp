@@ -10,9 +10,10 @@
 #include <iostream>
 using namespace std;
 
-class TemperatureConverter {
+// TemperatureConverter class definition
+class TemperatureConverter { // class name
     private:
-       double kelvin_;
+       double kelvin_; // class variable
     public:
        void SetTempFromKelvin(double kelvin);
        void SetTempFromCelsius(double celsius);
@@ -21,42 +22,42 @@ class TemperatureConverter {
        double GetTempAsCelsius() const;
        double GetTempAsFahrenheit() const;
        void PrintTemperatures(double dataKelvin, double dataCelsius, double dataFahrenheit);
-       TemperatureConverter();
+       TemperatureConverter(); // default constructor
 };
 
-TemperatureConverter::TemperatureConverter() {
-    kelvin_ = 0;
+TemperatureConverter::TemperatureConverter() { // default constructor
+    kelvin_ = 0; // default kelvin_
     return;
 }
 
-void TemperatureConverter::SetTempFromKelvin(double kelvin) {
+void TemperatureConverter::SetTempFromKelvin(double kelvin) { // SetTempFromKelvin is a TemperatureConverter member function.
     kelvin_ = kelvin;
     return;
 }
 
-void TemperatureConverter::SetTempFromCelsius(double celsius) {
+void TemperatureConverter::SetTempFromCelsius(double celsius) { // SetTempFromCelsius is a TemperatureConverter member function.
     kelvin_ = celsius + 273.15;
     return;
 }
 
-void TemperatureConverter::SetTempFromFahrenheit(double fahrenheit) {
+void TemperatureConverter::SetTempFromFahrenheit(double fahrenheit) { // SetTempFromFahrenheit is a TemperatureConverter member function.
     kelvin_ = (5 * (fahrenheit - 32) / 9) + 273.15;
     return;
 }
 
-double TemperatureConverter::GetTempFromKelvin() const {
+double TemperatureConverter::GetTempFromKelvin() const { // GetTempFromKelvin is a TemperatureConverter member function.
     return kelvin_;
 }
 
-double TemperatureConverter::GetTempAsCelsius() const {
+double TemperatureConverter::GetTempAsCelsius() const { // GetTempAsCelsius is a TemperatureConverter member function.
     return kelvin_ - 273.15;
 }
 
-double TemperatureConverter::GetTempAsFahrenheit() const {
+double TemperatureConverter::GetTempAsFahrenheit() const { // GetTempAsFahrenheit is a TemperatureConverter function.
     return ((9 * (kelvin_ - 273.15)) / 5) + 32;
 }
 
-void TemperatureConverter::PrintTemperatures(double dataKelvin, double dataCelsius, double dataFahrenheit) {
+void TemperatureConverter::PrintTemperatures(double dataKelvin, double dataCelsius, double dataFahrenheit) { // prints the value as kelvin, celsius and fahrenheit.
     cout << endl;
     cout << "Kelvin: " << dataKelvin << endl;
     cout << "celsius: " << dataCelsius << endl;
