@@ -186,3 +186,22 @@ int main() {
         type4.PrintMoneys(dataDollars, dataEuros, dataBitcoins, dataYuans);
     }
 }
+
+/*
+ *Toshiki: Please input your data as Dollars: 1
+ *Dollars: 1 dollars
+ Toshiki: Please input your data as Dollars: 1
+ Yuans: 6.92 yuans
+ Toshiki: Please input your data as Dollars: 1
+ Bitcoins: 0.000871 bitcoins
+ Toshiki: Please input your data as Dollars: 1
+ Euros: 0.937 euros
+ Toshiki: Please input your data as Dollars: 100
+ Euros: 93.7 euros
+ Toshiki: Please input your data as Dollars: 10000000
+ Bitcoins: 8710 bitcoins
+ Toshiki: Please input your data as Dollars: 1
+ Dollars: 1150 dollars
+ Toshiki: Please input your data as Dollars: 6748.72
+ */
+ 
