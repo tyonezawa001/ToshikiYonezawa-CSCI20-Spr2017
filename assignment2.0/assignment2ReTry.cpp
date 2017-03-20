@@ -1,6 +1,6 @@
 /*
- *Created by: Toshiki Yonezawa
- *Created on:03/10/2017
+ *Updated by: Toshiki Yonezawa
+ *Updated on:03/20/2017
  *This program works as money converter, and it contains four different types of converter.
  *1st one converts dollars data to euros, bitcoins, and yuans data.
  *2nd one converts euros data to dollars, bitcoins, and yuans data.
@@ -8,7 +8,6 @@
  *4th one converts yuans data to dollars, euros, and bitcoins data.
  *Each exchange rates are based on 03/10/2017's data.
  */
-
 
 #include <iostream>
 using namespace std;
@@ -18,15 +17,15 @@ class MoneyConverter { // class name
     private:
        double dollars_; // class variable
     public:
-       void SetMoneyFromDollars(double dollars);
-       void SetMoneyFromEuros(double euros);
-       void SetMoneyFromBitcoins(double bitcoins);
-       void SetMoneyFromYuans(double yuans);
-       double GetMoneyFromDollars() const;
-       double GetMoneyAsEuros() const;
-       double GetMoneyAsBitcoins() const;
-       double GetMoneyAsYuans() const;
-       void PrintMoneys(double dataDollars, double dataEuros, double dataBitcoins, double dataYuans);
+       void SetMoneyFromDollars(double dollars); // If input data is dollar data, the class variable replace dollars variable to dollars_.
+       void SetMoneyFromEuros(double euros); // If input data is euro data, the class variable calculates euros variable to dollars_.
+       void SetMoneyFromBitcoins(double bitcoins); // If input data is bitcoin data, the class variable calculates the bitcoint variable to dollars_
+       void SetMoneyFromYuans(double yuans); // If inout datais yuan data, the class variable calculates the yuans variable to dollars_.
+       double GetMoneyFromDollars() const; // The class variable replaces dollars_ to dollars data.
+       double GetMoneyAsEuros() const; // The class variable calculates dollars_ to euros data.
+       double GetMoneyAsBitcoins() const; // The class variable calculates dollars_ to bitcoins data.
+       double GetMoneyAsYuans() const; // The class variable calculates dollars_ to yuans data.
+       double PrintMoneys() const; // The class variable exists for output when input data is dollar data.
        MoneyConverter(); // default constructor
 };
 
@@ -71,15 +70,14 @@ double MoneyConverter::GetMoneyAsYuans() const { // the function gives yuans fro
     return dollars_ * 6.92;
 }
 
-void MoneyConverter::PrintMoneys(double dataDollars, double dataEuros, double dataBitcoins, double dataYuans) { // the class member prints the value as dollars, euros, bitcoins, and yuans by using other functions available.
+double MoneyConverter::PrintMoneys() const { // the class member prints the value as dollars, euros, bitcoins, and yuans by using other functions available.
    cout << endl;
-   cout << "Dollars: " << dataDollars << " dollars" << endl;
-   cout << "Euros: " << dataEuros << " euros" << endl;
-   cout << "Bitcoins: " << dataBitcoins << " bitcoins" << endl;
-   cout << "Yuans: " << dataYuans << " yuans" << endl;
+   cout << "Dollars: " << GetMoneyFromDollars() << " dollars" << endl;
+   cout << "Euros: " << GetMoneyAsEuros() << " euros" << endl;
+   cout << "Bitcoins: " << GetMoneyAsBitcoins() << " bitcoins" << endl;
+   cout << "Yuans: " << GetMoneyAsYuans() << " yuans" << endl;
    cout << endl;
-   return;
-} 
+}
 
 int main() {
     int ask;
@@ -87,10 +85,6 @@ int main() {
     double euros;
     double bitcoins;
     double yuans;
-    double dataDollars;
-    double dataEuros;
-    double dataBitcoins;
-    double dataYuans;
     
     cout << endl;
     cout << "Toshiki: This program is working as money converter." << endl;
@@ -113,17 +107,11 @@ int main() {
         
         MoneyConverter type1;
         
-        type1.SetMoneyFromDollars(dollars);
+        type1.SetMoneyFromDollars(dollars); // the class variable replace dollars variable to dollars_.
         
-        dataDollars = dollars;
+        dollars = type1.GetMoneyFromDollars();
         
-        dataEuros = type1.GetMoneyAsEuros();
-        
-        dataBitcoins = type1.GetMoneyAsBitcoins();
-        
-        dataYuans = type1.GetMoneyAsYuans();
-        
-        type1.PrintMoneys(dataDollars, dataEuros, dataBitcoins, dataYuans);
+        type1.PrintMoneys();
     }
     
     if (ask == 2) {
@@ -133,17 +121,11 @@ int main() {
         
         MoneyConverter type2;
         
-        type2.SetMoneyFromEuros(euros);
+        type2.SetMoneyFromEuros(euros); // the class variable replace euros variable to dollars_.
         
-        dataDollars = type2.GetMoneyFromDollars();
+        euros = type2.GetMoneyAsEuros();
         
-        dataEuros = euros;
-        
-        dataBitcoins = type2.GetMoneyAsBitcoins();
-        
-        dataYuans = type2.GetMoneyAsYuans();
-        
-        type2.PrintMoneys(dataDollars, dataEuros, dataBitcoins, dataYuans);
+        type2.PrintMoneys();
     }
 
     if (ask == 3) {
@@ -153,17 +135,11 @@ int main() {
         
         MoneyConverter type3;
         
-        type3.SetMoneyFromBitcoins(bitcoins);
+        type3.SetMoneyFromBitcoins(bitcoins); // the class variable replace bitcoins variable to dollars_.
         
-        dataDollars = type3.GetMoneyFromDollars();
+        bitcoins = type3.GetMoneyAsBitcoins();
         
-        dataEuros = type3.GetMoneyAsEuros();
-        
-        dataBitcoins = bitcoins;
-        
-        dataYuans = type3.GetMoneyAsYuans();
-        
-        type3.PrintMoneys(dataDollars, dataEuros, dataBitcoins, dataYuans);
+        type3.PrintMoneys();
     }
     
     if (ask == 4) {
@@ -173,17 +149,11 @@ int main() {
         
         MoneyConverter type4;
         
-        type4.SetMoneyFromYuans(yuans);
+        type4.SetMoneyFromYuans(yuans); // the class variable replace yuans variable to dollars_.
         
-        dataDollars = type4.GetMoneyFromDollars();
+        yuans = type4.GetMoneyAsYuans();
         
-        dataEuros = type4.GetMoneyAsEuros();
-        
-        dataBitcoins = type4.GetMoneyAsBitcoins();
-        
-        dataYuans = yuans;
-        
-        type4.PrintMoneys(dataDollars, dataEuros, dataBitcoins, dataYuans);
+        type4.PrintMoneys();
     }
 }
 
