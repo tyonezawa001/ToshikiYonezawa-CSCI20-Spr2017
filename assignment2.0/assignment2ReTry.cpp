@@ -109,8 +109,6 @@ int main() {
         
         type1.SetMoneyFromDollars(dollars); // the class variable replace dollars variable to dollars_.
         
-        dollars = type1.GetMoneyFromDollars();
-        
         type1.PrintMoneys();
     }
     
@@ -122,8 +120,6 @@ int main() {
         MoneyConverter type2;
         
         type2.SetMoneyFromEuros(euros); // the class variable replace euros variable to dollars_.
-        
-        euros = type2.GetMoneyAsEuros();
         
         type2.PrintMoneys();
     }
@@ -137,8 +133,6 @@ int main() {
         
         type3.SetMoneyFromBitcoins(bitcoins); // the class variable replace bitcoins variable to dollars_.
         
-        bitcoins = type3.GetMoneyAsBitcoins();
-        
         type3.PrintMoneys();
     }
     
@@ -150,8 +144,6 @@ int main() {
         MoneyConverter type4;
         
         type4.SetMoneyFromYuans(yuans); // the class variable replace yuans variable to dollars_.
-        
-        yuans = type4.GetMoneyAsYuans();
         
         type4.PrintMoneys();
     }
