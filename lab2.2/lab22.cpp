@@ -23,7 +23,7 @@ void randomGenerator(){
     
 }
 
-// int main() structure 
+// int main() structure.
 int main(){
     
     randomGenerator();
