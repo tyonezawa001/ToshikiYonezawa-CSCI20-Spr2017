@@ -1,6 +1,6 @@
 /*
- *Created by: Toshiki Yonezawa
- *Created on: 03/07/2017
+ *Updated by: Toshiki Yonezawa
+ *Updated on: 03/21/2017
  *This program is bale to hold information about 5 books.
  *User must input a tttle, an author, and a copyright year about each books.
  *Output shows user's inputs about each books.
