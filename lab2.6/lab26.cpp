@@ -1,7 +1,7 @@
 /*
  *Created by: Toshiki Yonezawa
  *Created on: 03/09/2017
- *This program works as temperature converter, and it contains three different types of converter.
+ *The program works as temperature converter, and it contains three different types of converter.
  *1st one converts kelvin data to celsius and fahrenheit data.
  *2nd one converts celsius data to kelvin and fahrenheit data.
  *3rd one converts fahrenheit data to kelvin and celsius data. 
