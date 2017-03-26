@@ -60,8 +60,10 @@ int main() {
     cin >> secondNum;
     cout << endl;
     
-    if (firstNum > secondNum) // it is for compareing the two input numbers about huge and small. 
+    if (firstNum > secondNum) {
+    // it is for compareing the two input numbers about huge and small. 
     swapFunction(firstNum, secondNum);
+    }
     
     randomNumGenerator(firstNum, secondNum, randomNum); 
     
