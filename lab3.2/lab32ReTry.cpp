@@ -30,9 +30,9 @@ int main() {
     cout << endl;
     cout << "Name(ex.Toshiki_Yonezawa): ";
     cin >> name; // variable for asking name.
-    cout << "Wage(ex.10000): ";
+    cout << "Wage(ex.$10000): $";
     cin >> wage; // variable for asking wage.
-    cout << "Withheld(ex.10000): ";
+    cout << "Withheld(ex.$10000): $";
     cin >> withheld; // variable for asking withheld
     cout << endl;
     cout << "I am so sorry. I must ask a more personal question to you." << endl;
