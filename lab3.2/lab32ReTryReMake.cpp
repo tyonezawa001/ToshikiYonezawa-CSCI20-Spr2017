@@ -1,3 +1,12 @@
+/*
+ *Updated by: Toshiki Yonezawa
+ *Updated on: 03/29/2017
+ *This program works as income tax calculator. 
+ *The program can calculate a right tax value from input wage data, and then it compare between right tax value and withheld value.
+ *If the program gets a negative value from the comparering, user must pay more tax.
+ *If the program gets a positive velue from the comparering, user must get a refund.
+ */
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -103,3 +112,21 @@ int main() {
     return 0;
     
 }
+
+/*
+ *Name: Joe Vandal
+ *Total Gross Adjusted Income: $8200.
+ *Must pay more tax which is $570.
+ *
+ *Name: Alfonso Haynes
+ *Total Gross Adjusted Income: $24551.
+ *Must get a refund which is $401.85.
+ *
+ *Name: Bridget Rowe
+ *Total Gross Adjusted Income: $84329.
+ *Must pay more tax which is $4954.
+ *
+ *Name: Wendy Joseph
+ *Total Gross Adjusted Income: $65491.
+ *Must pay more tax which is $1959.15.
+ */
