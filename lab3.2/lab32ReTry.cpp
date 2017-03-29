@@ -46,41 +46,42 @@ int main() {
         
             agiSingle = (wage - exemption); // calculate the adjusred Gross Income.
         
-            if (0 <= agiSingle && agiSingle <= 8925) { // $0 <= agi <= $8925.
+            if (0 <= agiSingle && agiSingle <= 8925) { // $0 <= agi <= $8,925.
                 tax = (agiSingle * 0.1); // 10% of agi.
             }
-            else if (8926 <= agiSingle && agiSingle <= 36250) { // 
-                tax = 892.50 + ((agiSingle - 8925) * 0.15);
+            else if (8926 <= agiSingle && agiSingle <= 36250) { // $8,926 <= agi <= 36,250.
+                tax = 892.50 + ((agiSingle - 8925) * 0.15); // $892.50 plus 15% of the excess over $8,925.
             }
-            else if (36251 <= agiSingle && agiSingle <= 87850) {
-                tax = 4991.25 + ((agiSingle - 36250) * 0.25);
+            else if (36251 <= agiSingle && agiSingle <= 87850) { // $36,251 <= agi <= $87,850.
+                tax = 4991.25 + ((agiSingle - 36250) * 0.25); // $4991.25 plus 25% of the excess over $36,250.
             }
-            else if (87851 <= agiSingle) {
-                tax = 17891.25 + ((agiSingle - 87850) * 0.28);
+            else if (87851 <= agiSingle) { // 87,851 <= adi.
+                tax = 17891.25 + ((agiSingle - 87850) * 0.28); // $17,891.25 plus 28% of the excess over $87,850
             }
             
+            // output for the program.
             cout << endl;
             cout << "Name: " << name << endl;
             cout << "Total Gross Adjusted Income: $" << agiSingle << "." << endl;
             cout << "Total tax owed: $" << tax << "." << endl;
             
-            difference = withheld - tax;
+            difference = withheld - tax; // compare between withheld and tax.
             
-            if (difference > 0) {
+            if (difference > 0) { // get a refund when difference is positive value. 
                 
                 cout << endl;
                 cout << "Congratulstions! you will get a refund which is $" << difference << "." << endl;
                 
             }
-            else if (difference < 0) {
+            else if (difference < 0) { // must pay more tax when difference is negatie value.
                 
-                positiveDifference = (difference * -1);
+                positiveDifference = (difference * -1); // change a sign for output.
                 
                 cout << endl;
                 cout << "I am so sorry, but you must pay more tax which is $" << positiveDifference << "." <<endl;
                 
             }
-            else {
+            else { // dothing happen when the difference is zero.
                 
                 cout << endl;
                 cout << "You don't have to pay more tax, and you don't get a refund too." << endl;
@@ -89,40 +90,41 @@ int main() {
             break;
         case 'm': // situation for married person.
         
-            agiMarried = (wage - (exemption * 2));
+            agiMarried = (wage - (exemption * 2)); // we must subtruct 2 times exemption because the user is married person.
         
-            if (0 <= agiMarried && agiMarried <= 17850) {
-                tax = (agiMarried * 0.1);
+            if (0 <= agiMarried && agiMarried <= 17850) { // $0 <= agi <= $17,850.
+                tax = (agiMarried * 0.1); // 10% of adj.
             }
-            else if (17851 <= agiMarried && agiMarried <= 72500) {
-                tax = 1785 + ((agiMarried - 17850) * 0.15);
+            else if (17851 <= agiMarried && agiMarried <= 72500) { // $17,851 <= adj <= $72,500.
+                tax = 1785 + ((agiMarried - 17850) * 0.15); // $1,785 plus 15% of the excess over $17,850.
             }
-            else if (72501 <= agiMarried) {
-                tax = 9982.5 + ((agiMarried - 72500) * 0.28);
+            else if (72501 <= agiMarried) { // $72,501 <= agi.
+                tax = 9982.5 + ((agiMarried - 72500) * 0.28); // $9,982.50 plus 28% of the excess over $72,500.
             }
             
+            // output for the program
             cout << endl;
             cout << "Name: " << name << endl;
             cout << "Total Gross Adjusted Income: $" << agiMarried << "." << endl;
             cout << "Total tax owed: $" << tax << "." << endl;
             
-            difference = withheld - tax;
+            difference = withheld - tax; // compare between wthheld and tax.
             
-            if (difference > 0) {
+            if (difference > 0) { // when he difference is positive value, get a refund.
                 
                 cout << endl;
                 cout << "Congratulstions! you will get a refund which is $" << difference << "." << endl;
                 
             }
-            else if (difference < 0) {
+            else if (difference < 0) {// when the difference is negative value, must pay more tax.
                 
-                positiveDifference = (difference * -1);
+                positiveDifference = (difference * -1); // the equation for changing sign.
                 
                 cout << endl;
                 cout << "I am so sorry, but you must pay more tax which is $" << positiveDifference << "." <<endl;
                 
             }
-            else {
+            else { // nothing happen when the difference is zero.
                 
                 cout << endl;
                 cout << "You don't have to pay more tax, and you don't get a refund too." << endl;
