@@ -64,10 +64,10 @@ int main() {
             return 0;
         }
         else {
-        cout << endl;
-        cout << "You already saw 5 times of hint!" << endl;
-        cout << "Now you must guess answers without hint!" << endl;
-        cin >> guess;
+            cout << endl;
+            cout << "You already saw 5 times of hint!" << endl;
+            cout << "Now you must guess answers without hint!" << endl;
+            cin >> guess;
         }
     }
     
