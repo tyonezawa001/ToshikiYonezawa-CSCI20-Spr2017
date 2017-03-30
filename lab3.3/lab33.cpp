@@ -3,7 +3,7 @@
  *Created on: 03/30/2017
  *this program works as gessing game. it choose one number randomly, and game player guess the number.
  *The game player can see 5 times of hint. If the player uses 5 times of hint, the player must guess the number without hint.
- *
+ *enjoy it : )
  */
 
 #include <iostream>
