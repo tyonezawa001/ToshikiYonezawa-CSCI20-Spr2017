@@ -13,9 +13,9 @@ using namespace std;
 
 int main() {
     
-    int random = 0;
-    int guess = 0;
-    int hint = 0;
+    int random = 0; // variable for random number.
+    int guess = 0; // variable for gussing number.
+    int hint = 0; // variable for hint.
     
     cout << endl;
     cout << "Welcome to Toshiki's arcade!" << endl;
@@ -29,22 +29,21 @@ int main() {
     
     cout << endl;
     cout << "What's your guessing number: ";
-    cout << random;
     cin >> guess;
     
-    while (guess != random) {
+    while (guess != random) { // the loop continues while guess number becomes same number with random number.
         
-        for (; hint < 5; hint++) {
+        for (; hint < 5; hint++) { // game player can see five tmes of hint.
             
-            if (guess > random) {
+            if (guess > random) { // if statement for compareing.
                 cout << endl;
                 cout << "Your guessing number is higher than the randomly number!" << endl;
             }
-            else if (guess < random) {
+            else if (guess < random) { // if statement for compareing.
                 cout << endl;
                 cout << "Your guessing number is lower than the randomly number!" << endl;
             }
-            else if (guess == random) {
+            else if (guess == random) { // if statement for compareing.
                 cout << endl;
                 cout << "Yeah! your guessing number " << guess << " is same with the randomly number!" << endl;
                 cout << "Thank you for playing the game. have a good day!" << endl;
@@ -57,7 +56,7 @@ int main() {
             cin >> guess;
         }
         
-        if (guess == random) {
+        if (guess == random) { // I need the if statement because I must give correct when game player input 6th answer.
             cout << endl;
                 cout << "Yeah! your guessing number " << guess << " is same with the randomly number!" << endl;
                 cout << "Thank you for playing the game. have a good day!" << endl;
