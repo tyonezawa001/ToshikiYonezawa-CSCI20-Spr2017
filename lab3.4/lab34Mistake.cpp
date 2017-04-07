@@ -3,8 +3,10 @@ Write a loan calculator program. The user borrows A dollars at R%interest (compo
  #include <iostream> 
 using namespace std; 
 int main(){
+  
   double a, m, r;
   int y, I;   // Input amount, payment, interest rate, and number of years
+  
   cout << "Enter the amount borrowed: ";
   cin >> a;
   cout << "Enter the monthly payment you'll make: ";
@@ -13,17 +15,22 @@ int main(){
   cin >> r;
   cout << "Enter the number of years you want to simulate: ";
   cin >> y;
-   // convert interest rate from percent to fraction
+  
+  // convert interest rate from percent to fraction
   r = r/100;
-   // iterate through each month
-  for(int i = 0; i < y*12; i++)
-  {
+  
+  // iterate through each month
+  for(int i = 0; i < y*12; i++) {
+    
     // calculate additional interest
     I = a*(r/12);
+    
     // add interest and subtract payment from balance
     a = a + I - m;
   }
-   // Print ending amount
+  
+  // Print ending amount
   cout << "At the end of " << y << " years you owe "       << a << " dollars" << endl;
-   return 0;
+  
+  return 0;
 }
