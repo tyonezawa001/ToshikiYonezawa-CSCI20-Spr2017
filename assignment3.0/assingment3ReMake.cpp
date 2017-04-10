@@ -1,6 +1,6 @@
 /*
  *Created by: Toshiki Yonezawa
- *Created on: 04/06/2017
+ *Created on: 04/09/2017
  *This proram works as a 'Rock Paper Scissors Lizard Spock' game. Input and output are controcontrolled on the int main section.
  *In addition, class statement works as scoring the game.
  */
@@ -14,17 +14,11 @@ using namespace std;
 // class statement for scoring the game
 class Scoring {
     public:
-        void CountWinning (int winning) const;
-        void SetWinning (int winning); // set variable winning to win
-        int GetResult () const; // retrun to win
+        void SetWinning (int winning); // set variable 'winning' to the variable 'win'
+        int GetResult () const; // return to win 
     private:
         int win = 0;
 };
-
-void Scoring::CountWinning (int winning) const {
-    winning = winning + 1;
-    return;
-}
 
 void Scoring::SetWinning (int winning) {
     win = winning;
@@ -64,7 +58,6 @@ int main() {
     cout << "Spock vaporizes Rock" << endl;
     cout << "Rock crushes Scissors" << endl;
     cout << "--------------------" << endl;
-    cout << endl;
     cout << "Could you understand the rule? Let's start playing the game." << endl;
     
     while (fight != 3 && fight != 5 && fight != 7) {
@@ -109,8 +102,6 @@ int main() {
         }
         
         cout << endl;
-        cout << winning << endl;
-        cout << convertedVariable << endl;
         cout << "What's your variable?(Please choose one variable from Rock, Paper, Scissors, Lizard, or Spock): ";
         cin >> userVariable;
         cout << endl;
@@ -124,7 +115,7 @@ int main() {
             else if (userVariable == "Paper") {
                 cout << endl;
                 cout << "You won the game." << endl;
-                battle.CountWinning (winning);
+                winning = winning + 1;
                 battle.SetWinning(winning);
             }
             else if (userVariable == "Scissors") {
@@ -138,7 +129,7 @@ int main() {
             else if (userVariable == "Spock") {
                 cout << endl;
                 cout << "You won the game." << endl;
-                battle.CountWinning (winning);
+                winning = winning + 1;
                 battle.SetWinning(winning);
             }
         }
@@ -154,13 +145,13 @@ int main() {
             else if (userVariable == "Scissors") {
                 cout << endl;
                 cout << "You won the game." << endl;
-                battle.CountWinning (winning);
+                winning = winning + 1;
                 battle.SetWinning(winning);
             }
             else if (userVariable == "Lizard") {
                 cout << endl;
                 cout << "You won the game." << endl;
-                battle.CountWinning (winning);
+                winning = winning + 1;
                 battle.SetWinning(winning);
             }
             else if (userVariable == "Spock") {
@@ -172,7 +163,7 @@ int main() {
             if (userVariable == "Rock") {
                 cout << endl;
                 cout << "You won the game." << endl;
-                battle.CountWinning (winning);
+                winning = winning + 1;
                 battle.SetWinning(winning);
             }
             else if (userVariable == "Paper") {
@@ -190,7 +181,7 @@ int main() {
             else if (userVariable == "Spock") {
                 cout << endl;
                 cout << "You won the game." << endl;
-                battle.CountWinning (winning);
+                winning = winning + 1;
                 battle.SetWinning(winning);
             }
         }
@@ -198,7 +189,7 @@ int main() {
             if (userVariable == "Rock") {
                 cout << endl;
                 cout << "You won the game." << endl;
-                battle.CountWinning (winning);
+                winning = winning + 1;
                 battle.SetWinning(winning);
             }
             else if (userVariable == "Paper") {
@@ -208,7 +199,7 @@ int main() {
             else if (userVariable == "Scissors") {
                 cout << endl;
                 cout << "You won the game." << endl;
-                battle.CountWinning (winning);
+                winning = winning + 1;
                 battle.SetWinning(winning);
             }
             else if (userVariable == "Lizard") {
@@ -228,7 +219,7 @@ int main() {
             else if (userVariable == "Paper") {
                 cout << endl;
                 cout << "You won the game." << endl;
-                battle.CountWinning (winning);
+                winning = winning + 1;
                 battle.SetWinning(winning);
             }
             else if (userVariable == "Scissors") {
@@ -238,7 +229,7 @@ int main() {
             else if (userVariable == "Lizard") {
                 cout << endl;
                 cout << "You won the game." << endl;
-                battle.CountWinning (winning);
+                winning = winning + 1;
                 battle.SetWinning(winning);
             }
             else if (userVariable == "Spock") {
