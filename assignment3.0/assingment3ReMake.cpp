@@ -1,7 +1,7 @@
 /*
  *Created by: Toshiki Yonezawa
- *Created on: 04/09/2017
- *This proram works as a 'Rock Paper Scissors Lizard Spock' game. Input and output are controcontrolled on the int main section.
+ *Created on: 04/10/2017
+ *This program works as a 'Rock Paper Scissors Lizard Spock' game. Input and output are controcontrolled on the int main section.
  *In addition, class statement works as scoring the game.
  */
 
@@ -115,25 +115,25 @@ int main() {
         
         // comparing the user input and the roundomly comouter's variable
         if (convertedVariable == "Rock") {
-            if (userVariable == "Rock") {
+            if ((userVariable == "Rock") || (userVariable == "rock")) {
                 cout << endl;
                 cout << "You draw the game." << endl;
             }
-            else if (userVariable == "Paper") {
+            else if ((userVariable == "Paper") || (userVariable == "paper")) {
                 cout << endl;
                 cout << "You won the game." << endl;
                 winning = winning + 1; // if user won the game, the program add one to variable winning
                 battle.SetWinning(winning); // converting variable to win from winning.
             }
-            else if (userVariable == "Scissors") {
+            else if ((userVariable == "Scissors") || (userVariable == "scissors")) {
                 cout << endl;
                 cout << "You lose the game." << endl;
             }
-            else if (userVariable == "Lizard") {
+            else if ((userVariable == "Lizard") || (userVariable == "lizard")) {
                 cout << endl;
                 cout << "You lose the game." << endl;
             }
-            else if (userVariable == "Spock") {
+            else if ((userVariable == "Spock") || (userVariable == "spock")) {
                 cout << endl;
                 cout << "You won the game." << endl;
                 winning = winning + 1; // if user won the game, the program add one to variable winning
@@ -141,51 +141,51 @@ int main() {
             }
         }
         else if (convertedVariable == "Paper") {
-            if (userVariable == "Rock") {
+            if ((userVariable == "Rock") || (userVariable == "rock")) {
                 cout << endl;
                 cout << "You lose the game." << endl;
             }
-            else if (userVariable == "Paper") {
+            else if ((userVariable == "Paper") || (userVariable == "paper")) {
                 cout << endl;
                 cout << "You draw the game." << endl;
             }
-            else if (userVariable == "Scissors") {
+            else if ((userVariable == "Scissors") || (userVariable == "scissors")) {
                 cout << endl;
                 cout << "You won the game." << endl;
                 winning = winning + 1; // if user won the game, the program add one to variable winning
                 battle.SetWinning(winning); // converting variable to win from winning.
             }
-            else if (userVariable == "Lizard") {
+            else if ((userVariable == "Lizard") || (userVariable == "lizard")) {
                 cout << endl;
                 cout << "You won the game." << endl;
                 winning = winning + 1; // if user won the game, the program add one to variable winning
                 battle.SetWinning(winning); // converting variable to win from winning.
             }
-            else if (userVariable == "Spock") {
+            else if ((userVariable == "Spock") || (userVariable == "spock")) {
                 cout << endl;
                 cout << "You lose the game." << endl;
             }
         }
         else if (convertedVariable == "Scissors") {
-            if (userVariable == "Rock") {
+            if ((userVariable == "Rock") || (userVariable == "rock")) {
                 cout << endl;
                 cout << "You won the game." << endl;
                 winning = winning + 1; // if user won the game, the program add one to variable winning
                 battle.SetWinning(winning); // converting variable to win from winning.
             }
-            else if (userVariable == "Paper") {
+            else if ((userVariable == "Paper") || (userVariable == "paper")) {
                 cout << endl;
                 cout << "You lose the game." << endl;
             }
-            else if (userVariable == "Scissors") {
+            else if ((userVariable == "Scissors") || (userVariable == "scissors")) {
                 cout << endl;
                 cout << "You draw the game." << endl;
             }
-            else if (userVariable == "Lizard") {
+            else if ((userVariable == "Lizard") || (userVariable == "lizard")) {
                 cout << endl;
                 cout << "You lose the game." << endl;
             }
-            else if (userVariable == "Spock") {
+            else if ((userVariable == "Spock") || (userVariable == "spock")) {
                 cout << endl;
                 cout << "You won the game." << endl;
                 winning = winning + 1; // if user won the game, the program add one to variable winning
@@ -193,53 +193,53 @@ int main() {
             }
         }
         else if (convertedVariable == "Lizard") {
-            if (userVariable == "Rock") {
+            if ((userVariable == "Rock") || (userVariable == "rock")) {
                 cout << endl;
                 cout << "You won the game." << endl;
                 winning = winning + 1; // if user won the game, the program add one to variable winning
                 battle.SetWinning(winning); // converting variable to win from winning.
             }
-            else if (userVariable == "Paper") {
+            else if ((userVariable == "Paper") || (userVariable == "paper")) {
                 cout << endl;
                 cout << "You lose the game." << endl;
             }
-            else if (userVariable == "Scissors") {
+            else if ((userVariable == "Scissors") || (userVariable == "scissors")) {
                 cout << endl;
                 cout << "You won the game." << endl;
                 winning = winning + 1; // if user won the game, the program add one to variable winning
                 battle.SetWinning(winning); // converting variable to win from winning.
             }
-            else if (userVariable == "Lizard") {
+            else if ((userVariable == "Lizard") || (userVariable == "lizard")) {
                 cout << endl;
                 cout << "You draw the game." << endl;
             }
-            else if (userVariable == "Spock") {
+            else if ((userVariable == "Spock") || (userVariable == "spock")) {
                 cout << endl;
                 cout << "You lose the game." << endl;
             }
         }
         else if (convertedVariable == "Spock") {
-            if (userVariable == "Rock") {
+            if ((userVariable == "Rock") || (userVariable == "rock")) {
                 cout << endl;
                 cout << "You lose the game." << endl;
             }
-            else if (userVariable == "Paper") {
+            else if ((userVariable == "Paper") || (userVariable == "paper")) {
                 cout << endl;
                 cout << "You won the game." << endl;
                 winning = winning + 1; // if user won the game, the program add one to variable winning
                 battle.SetWinning(winning); // converting variable to win from winning.
             }
-            else if (userVariable == "Scissors") {
+            else if ((userVariable == "Scissors") || (userVariable == "scissors")) {
                 cout << endl;
                 cout << "You lose the game." << endl;
             }
-            else if (userVariable == "Lizard") {
+            else if ((userVariable == "Lizard") || (userVariable == "lizard")) {
                 cout << endl;
                 cout << "You won the game." << endl;
                 winning = winning + 1; // if user won the game, the program add one to variable winning
                 battle.SetWinning(winning); // converting variable to win from winning.
             }
-            else if (userVariable == "Spock") {
+            else if ((userVariable == "Spock") || (userVariable == "spock")) {
                 cout << endl;
                 cout << "You draw the game." << endl;
             }
