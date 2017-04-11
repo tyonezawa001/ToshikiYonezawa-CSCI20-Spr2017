@@ -2,7 +2,8 @@
  *Created by: Toshiki Yonezawa
  *Created on: 04/10/2017
  *This program works as a 'Rock Paper Scissors Lizard Spock' game. Input and output are controcontrolled on the int main section.
- *In addition, class statement works as scoring the game.
+ *In addition, class statement works as scoring the game. 
+ *If user wins one game, the programing add 1 point to variable 'winning', and then class functiions store the point into other variable 'win'
  */
 
 #include <iostream>
