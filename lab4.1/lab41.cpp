@@ -30,7 +30,7 @@ int main() {
     cout << "Search – search the array for a specified value and return the location if the value is found and -1 otherwise" << endl;
     cout << "Is_sorted – check to see of the array is sorted in ascending order." << endl;
     cout << endl;
-    cout << "What do you want to do?: " << endl;
+    cout << "What do you want to do now?: " << endl;
     cout << "Please input 'print', 'min', 'max', 'sum', 'even', 'odd', 'search', or 'stored'." << endl; 
     cout << "Please choose a function: ";
     cin >> ask;
