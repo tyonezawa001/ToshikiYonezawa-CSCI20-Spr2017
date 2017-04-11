@@ -56,5 +56,5 @@ int main(){
  *Enter the monthly payment you'll make: 200
  *Enter the annual interest rate: 7.5
  *Enter the number of years you want to simulate: 3
- *At the end of 3 years you owe 4468.19 dollars
+ *At the end of 3 years you owe 4468.19 dollars.
  */

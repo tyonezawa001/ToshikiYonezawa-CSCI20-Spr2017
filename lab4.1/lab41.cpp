@@ -20,8 +20,6 @@ int main() {
     vals[8] = 123; 
     vals[9] = 534;
     
-    cout << vals[5] << endl;
-    
     cout << endl;
     cout << "Now I store 10 numbers in this program." << endl;
     cout << "You can use 7 different functions in this program." << endl;
