@@ -2,16 +2,13 @@
 #include <string>
 using namespace std;
 
+
+
 int main() {
     
     string ask;
-    int i;
-    int place;
-    int sum = 0;
-    int max;
-    int min;
     
-    int vals[10] = {342, 234, 123, 765, 999, 763, 876, 112, 987, 231};
+    int vals[10] = {342, 234, 123, 765, 453, 763, 876, 112, 987, 231};
     
     cout << endl;
     cout << "The program stores 10 numbers in this program." << endl;
@@ -31,50 +28,21 @@ int main() {
     while (ask != "exit" || ask != "Exit") {
     
         if (ask == "print" || ask == "Print") {
-            for (i = 0; i < 10; i++) {
-                cout << endl;
-                cout << "vals[" << i << "] = " << vals[i] << endl; 
-            }
-            cout << endl;
             cout << "Please input 'print', 'min', 'max', 'sum', 'even', 'odd', 'search', 'sort', or 'exit'." << endl; 
             cout << "Please choose a function: ";
             cin >> ask;
         }
         else if (ask == "min" || ask == "Min") {
-            for (i = 1; i < 10; i++) {
-                if (min > vals[i]) {
-                    min = vals[i];
-                    place = i;
-                }
-            }
-            cout << endl;
-            cout << "min value is in vals[" << place << "] which is " << min << "." << endl;
-            cout << endl;
             cout << "Please input 'print', 'min', 'max', 'sum', 'even', 'odd', 'search', 'sort', or 'exit'." << endl; 
             cout << "Please choose a function: ";
             cin >> ask;
         }
         else if (ask == "max" || ask == "Max") {
-            for (i = 1; i < 10; i++) {
-                if (max < vals[i]) {
-                    max = vals[i];
-                    place = i;
-                }
-            }
-            cout << endl;
-            cout << "max value is in vals[" << place << "] which is " << max << "." << endl;
-            cout << endl;
             cout << "Please input 'print', 'min', 'max', 'sum', 'even', 'odd', 'search', 'sort', or 'exit'." << endl; 
             cout << "Please choose a function: ";
             cin >> ask;
         }
         else if (ask == "sum" || ask == "Sum") {
-            for (i = 0; i < 10; i++) {
-                sum += vals[i];
-            }
-            cout << endl;
-            cout << "sum = " << sum << endl;
-            cout << endl;
             cout << "Please input 'print', 'min', 'max', 'sum', 'even', 'odd', 'search', 'sort', or 'exit'." << endl; 
             cout << "Please choose a function: ";
             cin >> ask;
@@ -101,7 +69,7 @@ int main() {
         }
         else if (ask == "exit" || ask == "Exit") {
             cout << endl;
-            cout << "I depply appriciate you for using the program." << endl;
+            cout << "I depply aprocoate you for using the program." << endl;
             return 0;
         }
     }    
