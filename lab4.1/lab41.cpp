@@ -13,20 +13,15 @@ class ArrayTools {
     public:
         int SetArray();
         int GetPrint();
-        int GetMin();
-        int GetMax();
-        int GetSum();
-        int GetEvenOdd();
-        int GetSearch();
+        int GetMin(int min, int place);
+        int GetMax(int min, int place);
+        int GetSum(int sum);
+        int GetEvenOdd(int j, int k);
+        int GetSearch(int search, int place);
+        int GetSort();
     private:
         int i;
-        int j = 0;
-        int k = 0;
         int vals[10] = {0};
-        int min;
-        int max;
-        int place;
-        int sum;
         int even[10] = {0};
         int odd[10] = {0};
 };
@@ -44,7 +39,7 @@ int ArrayTools::GetPrint() {
     }
 }
 
-int ArrayTools::GetMin() {
+int ArrayTools::GetMin(int min, int place) {
     min = vals[0];
     for (i = 1; i < 10; i++) {
         if (vals[i] < min) {
@@ -56,7 +51,7 @@ int ArrayTools::GetMin() {
     cout << "min value is in vals[" << place << "] which is " << min << "." << endl;
 }
 
-int ArrayTools::GetMax() {
+int ArrayTools::GetMax(int max, int place) {
     max = vals[0];
     for (i = 1; i < 10; i++) {
         if (max < vals[i]) {
@@ -68,7 +63,7 @@ int ArrayTools::GetMax() {
     cout << "max value is in vals[" << place << "] which is " << max << "." << endl;
 }
 
-int ArrayTools::GetSum() {
+int ArrayTools::GetSum(int sum) {
     sum = vals[0];
     for (i = 0; i < 10; i++) {
         sum += vals[i];
@@ -77,7 +72,7 @@ int ArrayTools::GetSum() {
     cout << "sum = " << sum << endl;
 }
 
-int ArrayTools::GetEvenOdd() {
+int ArrayTools::GetEvenOdd(int j, int k) {
     for (i = 0; i < 10; i++) {
         if (vals[i]%2 == 0) {
             even[j] = vals[i];
@@ -101,13 +96,38 @@ int ArrayTools::GetEvenOdd() {
     cout << endl;
 }
 
-int ArrayTools::GetSearch() {
+int ArrayTools::GetSearch(int search, int place) {
+    cout << endl;
+    cout << "Which value you know in the array? Please input the value: ";
+    cin >> search;
+    for (i = 0; i < 10; i++) {
+        if (vals[i] != search) {
+            cout << endl;
+            cout << "Your input value " << search << " is not in the array." << endl;
+            break;
+        }
+        else if (vals[i] == search) {
+            place = i;
+            cout << endl;
+            cout << "Your input value " << search << " is in vals[" << place << "]." << endl;
+        }
+    }
+}
+
+int ArrayTools::GetSort() {
     
 }
 
 int main() {
     
     string ask;
+    int min;
+    int max;
+    int place;
+    int sum;
+    int j = 0;
+    int k =0;
+    int search;
     
     ArrayTools function;
     
@@ -116,12 +136,12 @@ int main() {
     cout << "You can use 8 different functions in this program." << endl;
     cout << endl;
     cout << "Print – print the array values on the screen in order" << endl;
-    cout << "Find_min – search the array between two sizes to return the location of the minimum value in that part of the array" << endl;
-    cout << "Find_min – search the array between two sizes to return the location of the maximum value in that part of the array" << endl;
-    cout << "Num_even/odd – count the number of even and odd numbers in the array" << endl;
-    cout << "Search – search the array for a specified value and return the location if the value is found and -1 otherwise" << endl;
-    cout << "Is_sorted – check to see of the array is sorted in ascending order" << endl;    
-    cout << "Exit - end the proram" << endl;
+    cout << "min – search the array between two sizes to return the location of the minimum value in that part of the array" << endl;
+    cout << "max – search the array between two sizes to return the location of the maximum value in that part of the array" << endl;
+    cout << "even/odd – count the number of even and odd numbers in the array" << endl;
+    cout << "search – search the array for a specified value and return the location if the value is found and -1 otherwise" << endl;
+    cout << "sort – check to see of the array is sorted in ascending order" << endl;    
+    cout << "exit - end the program" << endl;
     cout << endl;
     cout << "Now you must store 10 numbers by yourself." << endl;
     
@@ -146,7 +166,7 @@ int main() {
         }
         else if (ask == "min" || ask == "Min") {
             
-            function.GetMin();
+            function.GetMin(min, place);
             
             cout << endl;
             cout << "Please input 'print', 'min', 'max', 'sum', 'even/odd', 'search', 'sort', or 'exit'." << endl; 
@@ -155,7 +175,7 @@ int main() {
         }
         else if (ask == "max" || ask == "Max") {
             
-            function.GetMax();
+            function.GetMax(max, place);
             
             cout << endl;
             cout << "Please input 'print', 'min', 'max', 'sum', 'even/odd', 'search', 'sort', or 'exit'." << endl; 
@@ -164,7 +184,7 @@ int main() {
         }
         else if (ask == "sum" || ask == "Sum") {
             
-            function.GetSum();
+            function.GetSum(sum);
             
             cout << endl;
             cout << "Please input 'print', 'min', 'max', 'sum', 'even/odd', 'search', 'sort', or 'exit'." << endl; 
@@ -173,7 +193,7 @@ int main() {
         }
         else if (ask == "even/odd" || ask == "Even/Odd") {
             
-            function.GetEvenOdd();
+            function.GetEvenOdd(j, k);
             
             cout << endl;
             cout << "Please input 'print', 'min', 'max', 'sum', 'even/odd', 'search', 'sort', or 'exit'." << endl; 
@@ -182,7 +202,7 @@ int main() {
         }
         else if (ask == "search" || ask == "Search") {
             
-            function.GetSearch();
+            function.GetSearch(search, place);
             
             cout << endl;
             cout << "Please input 'print', 'min', 'max', 'sum', 'even/odd', 'search', 'sort', or 'exit'." << endl; 
