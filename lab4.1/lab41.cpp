@@ -32,7 +32,7 @@ class ArrayTools {
         int GetMax(int min, int place); // the class function is for showing maximum value.
         int GetSum(int sum); // the class function is for showing the total sum of the 10 numbers.
         int GetEvenOdd(int j, int k); // the class function is for counting even and odd numbers which are contained by the array.
-        int GetSearch(); // the class is for searching a specific value in the array.
+        int GetSearch(int search); // the class is for searching a specific value in the array.
         int GetSort(int j, int sort); // the classs is arranging for the 10 numbers in ascending order
         ArrayTools(); // default constructor
     private:
@@ -129,8 +129,16 @@ int ArrayTools::GetEvenOdd(int j, int k) {
 }
 
 // searcing the specific value which is in the array
-int ArrayTools::GetSearch() {
-    
+int ArrayTools::GetSearch(int search) {
+    cout << endl;
+    cout << "Which number you want to find in the array? Please input a number: ";
+    cin >> search;
+    for (i = 0; i < 10; i++) {
+        if (vals[i] == search) {
+            return i;
+        }
+    }
+    return -1;
 }
 
 // arrnaging the 10 numbers in ascending order
@@ -160,6 +168,7 @@ int main() {
     int sum; // variable for total value of specific one. 
     int j = 0; // initialized value of j variable
     int k = 0; // initialized value of k variable
+    int search;
     int sort;
     
     ArrayTools function; // object of class type
@@ -248,7 +257,16 @@ int main() {
         // else if statement for searcing a specific number in the array
         else if (ask == "search" || ask == "Search") {
             
-            function.GetSearch();
+            place = function.GetSearch(search);
+            
+            if (place > -1) {
+                cout << endl;
+                cout << "The number found in vals[" << place << "]." << endl;
+            }
+            else {
+                cout << endl;
+                cout << "I am sorry. I couldn't find your input valuw in the array." << endl;
+            }
             
             cout << endl;
             cout << "Please input 'print', 'min', 'max', 'sum', 'even/odd', 'search', 'sort', or 'exit'." << endl; 
@@ -274,7 +292,7 @@ int main() {
             return 0;
         }
         
-        // else statment for unrespected input
+        // else statment for un-respected input
         else {
             cout << endl;
             cout << "Please do it all over again, try it again." << endl;
