@@ -1,6 +1,6 @@
 /*
  *Updated by: Toshiki Yonezawa
- *Updated on: 04/16/17
+ *Updated on: 04/20/17
  *First, this program ask user to set single array which contain 10 numbers.
  *Second, the program contains 7 function which works to the single array.
  *The 7 functions are...
