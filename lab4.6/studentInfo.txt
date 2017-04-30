@@ -1,39 +1,24 @@
-Suzy_Cue
+Suzy Cue
 3
-24
-3.5
-3 
-A
-3 
-A
-3 
-A
-3 
-B
+3 A
+3 A
+3 A
+3 B
 
-Joe_Joseph
+24 3.5
+Joe Joseph
 1
-0
-0.0
-4 
-D
-3 
-C
-3 
-B
-3 
-C
+4 D
+3 C
+3 B
+3 C
 
-Jillian_Smith
+0 0.0
+Jillian Smith
 5
-60
-4 
-C
-3 
-C
-4 
-C
-3 
-B
-3 
-C
+4 C
+3 C
+4 C
+3 B
+3 C
+60 2.5

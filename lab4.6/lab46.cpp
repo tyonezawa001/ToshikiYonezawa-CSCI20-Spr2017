@@ -4,51 +4,46 @@
 using namespace std;
 
 int main() {
-    ifstream inFS;
-    string name;
-    int semester;
-    int unit;
+    ifstream inFS("studentInfo.txt");
+    int student = 3;
+    std::string name;
+    string semester;
+    int unit = 0;
     string grade;
-    int totalUnits;
-    double overallGPA;
-    int i;
-    string loop;
-    double gradePoint;
+    int i = 0;
     
+    cout << endl;
+    cout << "Opening file studentInfo.txt..." << endl;
     
-    cout << "Opening file student.txt." << endl;
     inFS.open("studentInfo.txt");
     if (!inFS.is_open()) {
-        cout << "Couldn not open file studentInfo.txt." << endl;\
+        cout << endl;
+        cout << "Could not open file studentInfo.txt..." << endl;\
         return 1;
     }
     
-    for (i = 0; i < 3; i++) {
-        cout << "Reading data." << endl;
-        inFS >> name;
-        inFS >> semester;
-        inFS >> totalUnits;
-        inFS >> overallGPA;
-        while (loop == ' ') {
-        inFS >> loop;
-        inFS >> unit;
-        totalUnits = totalUnits + unit;
-        inFS >> grade;
-        if (grade == 'A') {
-            gradePoint = unit * 4.0;
-        }
-        else if (grade == 'B') {
-            gradePoint = unit * 3.0;
-        }
-        else if (grade == 'C') {
-            gradePoint = unit * 2.0;
-        }
-        else if (grade == 'D') {
-            gradePoint = unit * 1.0;
-        }
-        else if (grade == 'F') {
-            gradePoint = unit * 0;
-        }
+    cout << endl;
+    cout << "Reading data..." << endl;
+    
+    for (i = 0; i < student; i++) {
+    
+        std::getline (inFS,name);
+        std::getline (inFS,semester);
         
-        }
+        sscanf (inFS.studentInfo(), "%d,%s", &unit, grade);
+        
+        cout << name << endl;
+        cout << semester << endl;
+        cout << unit << endl;
+        cout << grade << endl;
+        
     }
+    
+    cout << endl;
+    cout << "Closing file studentInfo.txt..." << endl;
+    inFS.close();
+    
+        
+    
+    return 0;
+}
