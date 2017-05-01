@@ -58,9 +58,10 @@ int main() {
     convert >> totalUnit;  //the object has the value 12345 and stream it to the integer totalUnit
 
     stringGpa = data2.substr(data2.find(' ') + 1, data2.length());
+    gpa = atof(stringGpa.c_str());
     
     cout << totalUnit << endl;
-    cout << stringGpa << endl;
+    cout << gpa << endl;
 
     cout << endl;
     cout << "Closing file studentInfo.txt..." << endl;
