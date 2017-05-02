@@ -46,13 +46,13 @@ int main() {
     }
     
     cout << endl;
-    cout << "Opening file studentResult.txt..." << endl;
+    cout << "Opening file studentResult.html..." << endl;
     
     //open file for output
-    outFS.open("studentResult.txt");
+    outFS.open("studentResult.html");
     if (!outFS.is_open()) {
       cout << endl;
-      cout << "Could not open file studentResult.txt." << endl;
+      cout << "Could not open file studentResult.html." << endl;
       return 1;
     }
     
@@ -106,19 +106,26 @@ int main() {
     
     gpaOverall = ((gpa * totalUnit) + totalgradeSemester) / (unitSum + totalUnit); // overall gpa is given by here.
     
-    // write down to another file
-    outFS << "Student Name: " << name << endl;
-    outFS << "Completed semester: " << semester << " semesters" << endl;
-    outFS << "Semester GPA: " << setprecision (3) << gpaSemester << endl;
-    outFS << "Overrall GPA: " << setprecision (3) << gpaOverall <<endl;
-    
+    // write down to another file which is html file
+    outFS << "<!DOCTYPE html>" << endl;
+    outFS << "<html>" << endl;
+    outFS << "<head>" << endl;
+    outFS << "<title>Education Record</title>" << endl;
+    outFS << "</head>" << endl;
+    outFS << "<body>" << endl;
+    outFS << "<h1>Student Name: " << name << "</h1>" << endl;
+    outFS << "<p>Completed Semester: " << semester << "</p>" << endl;
+    outFS << "<p>Semester GPA: " << setprecision (3) << gpaSemester << "</p>" << endl;
+    outFS << "<p>Overrall GPA: " << setprecision (3) << gpaOverall << "</p>" << endl;
+    outFS << "</body>" << endl;
+    outFS << "</html>" << endl;
     
     cout << endl;
     cout << "Closing file studentInfo.txt..." << endl;
     inFS.close();
     
     cout << endl;
-    cout << "Closing file studentResult.txt..." << endl;
+    cout << "Closing file studentResult.html..." << endl;
     outFS.close();
     
     return 0;
