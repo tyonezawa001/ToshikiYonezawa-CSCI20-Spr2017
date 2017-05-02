@@ -89,7 +89,7 @@ int main() {
             gradeSemester = unit * 0; // if student get F garde for class, the line calculate total grade point which is given by unit for class times 0. 
         }
         else {
-            gradeSemester = 0;
+            gradeSemester = 0; // if input data contains strange part like "/0", just output gradeSemester = 0.
         }
         totalgradeSemester = totalgradeSemester + gradeSemester; // total grade points for semester is given by add grade point for each class on every loops
     }
