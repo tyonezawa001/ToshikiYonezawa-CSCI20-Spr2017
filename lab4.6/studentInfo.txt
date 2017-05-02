@@ -1,8 +1,8 @@
-Suzy Cue
-3
-3 A
-3 A
-3 A
+Toshiki Yonezawa
+6
+4 A
+4 A
+4 C
 3 B
 0
-24 3.5
+79.5 2.89
