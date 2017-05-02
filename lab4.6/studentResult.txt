@@ -1,3 +1,4 @@
 Student Name: Toshiki Yonezawa
-Semester GPA: 3.87
-Overrall GPA: 3.05
+Completed semester: 6 semesters
+Semester GPA: 3.27
+Overrall GPA: 2.95

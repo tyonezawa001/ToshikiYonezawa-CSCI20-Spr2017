@@ -88,9 +88,11 @@ int main() {
         else if (grade == "F") {
             gradeSemester = unit * 0; // if student get F garde for class, the line calculate total grade point which is given by unit for class times 0. 
         }
+        else {
+            gradeSemester = 0;
+        }
         totalgradeSemester = totalgradeSemester + gradeSemester; // total grade points for semester is given by add grade point for each class on every loops
     }
-    
     gpaSemester = totalgradeSemester / unitSum; // total gpa for this semester is given by total grade point devides by total units.
     
     std::getline (inFS, data2); // got a data which contains total unit (before this semester) and total gpa (bofre this semester)
@@ -105,12 +107,10 @@ int main() {
     gpaOverall = ((gpa * totalUnit) + totalgradeSemester) / (unitSum + totalUnit); // overall gpa is given by here.
     
     // write down to another file
-    outFS << "Student Name: ";
-    outFS << name << endl;
-    outFS << "Semester GPA: ";
-    outFS << setprecision (3) << gpaSemester << endl;
-    outFS << "Overrall GPA: ";
-    outFS << setprecision (3) << gpaOverall <<endl;
+    outFS << "Student Name: " << name << endl;
+    outFS << "Completed semester: " << semester << " semesters" << endl;
+    outFS << "Semester GPA: " << setprecision (3) << gpaSemester << endl;
+    outFS << "Overrall GPA: " << setprecision (3) << gpaOverall <<endl;
     
     
     cout << endl;
@@ -126,18 +126,22 @@ int main() {
 
 /*
  * Student Name: Suzy Cue
- * Semester GPA: 4.5
- * Overrall GPA: 3.83
+ * Completed semester: 3 semesters
+ * Semester GPA: 3.75
+ * Overrall GPA: 3.58
  *
  * Student Name: Joe Joseph
- * Semester GPA: 2.38
- * Overrall GPA: 2.38
+ * Completed semester: 1 semesters
+ * Semester GPA: 1.92
+ * Overrall GPA: 1.92
  *
  * Student Name: Jillian Smith
- * Semester GPA: 2.53
- * Overrall GPA: 2.51
+ * Completed semester: 5 semesters
+ * Semester GPA: 2.18
+ * Overrall GPA: 2.43
  *
  * Tosiki Yonezawa
- * Semester GPA: 3.87
- * Overrall GPA: 3.05
+ * Completed semester: 6 semesters
+ * Semester GPA: 3.27
+ * Overrall GPA: 2.95
  */
