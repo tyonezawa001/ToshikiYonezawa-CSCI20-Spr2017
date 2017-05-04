@@ -147,7 +147,7 @@ int main() {
  * Semester GPA: 2.18
  * Overrall GPA: 2.43
  *
- * Tosiki Yonezawa
+ * Toshiki Yonezawa
  * Completed semester: 6 semesters
  * Semester GPA: 3.27
  * Overrall GPA: 2.95

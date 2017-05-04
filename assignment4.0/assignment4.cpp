@@ -3,47 +3,69 @@
 #include <fstream>
 using namespace std;
 
-class gradeCalculator {
-    public:
-        string SetAnswerkey(ifstream inFS1, int i);
-    private:
-        int answerkey[17];
-        int studentAnswer[17];
-};
-
-char gradeCalculator::SetAnswerkey(ifstream inFS1, int i) {
-    for (i = 0; i < 17; i++) {
-        getline (inFS1, answerkey[i]);
-        cout << answerkey[i] << endl;
-    }
-}
-
 int main() {
     ifstream inFS1;
+    ifstream inFS2;
+    ofstream outFS;
+    string answerkey[20];
+    string studentAnswer[20];
     int i = 0;
-    
-    gradeCalculator student;
     
     cout << endl;
     cout << "Opening file answerkey.txt..." << endl;
     
-    // open file for input
     inFS1.open("answerkey.txt");
     if (!inFS1.is_open()) { // if the program cannot open this file, the program will stop to work.
         cout << endl;
-        cout << "Could not open file answerkey.txt..." << endl;\
+        cout << "Could not open file answerkey.txt..." << endl;
         return 1;
+    }
+    
+    cout << endl;
+    cout << "Opening file studentAnswer.txt..." << endl;
+    
+    inFS2.open("studentAnswer.txt");
+    if (!inFS2.is_open()) { // if the program cannot open this file, the program will stop to work.
+        cout << endl;
+        cout << "Could not open file studentAnswer.txt..." << endl;
+        return 1;
+    }
+    
+    cout << endl;
+    cout << "Opening file studentResult.txt..." << endl;
+    
+    //open file for output
+    outFS.open("studentResult.txt");
+    if (!outFS.is_open()) {
+      cout << endl;
+      cout << "Could not open file studentResult.txt..." << endl;
+      return 1;
     }
     
     cout << endl;
     cout << "Reading data..." << endl;
     
-    student.SetAnswerkey(inFS1, i);
+    for (i = 0; i < 18; i++) {
+        inFS1 >> answerkey[i];
+        cout << answerkey[i] << endl;
+    }
+    
+    for (i = 0; i < 20; i++) {
+        inFS2 >> studentAnswer[i];
+        cout << studentAnswer[i] << endl;
+    }
+    
+    outFS << studentAnswer[0] << " " << studentAnswer[1] << endl;
     
     cout << endl;
     cout << "Closing file answerkey.txt..." << endl;
     inFS1.close();
+    cout << endl;
+    cout << "Closing file studentAnswer.txt..." << endl;
+    inFS2.close();
+    cout << endl;
+    cout << "Closing file studentResult.txt..." << endl;
+    outFS.close();
     
     return 0;
-    
 }
