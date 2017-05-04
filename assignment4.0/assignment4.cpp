@@ -14,10 +14,8 @@ void gradeCalculator::compareTwoArray(string answerkey[18], string studentAnswer
         k = i + 2;
         if (answerkey[i] == studentAnswer[k]) {
             score = score + 1.0;
-            cout << "Right! " << endl;
         }
         else if (answerkey[i] != studentAnswer[k]) {
-            cout << "Wrong!" << endl;
             if (studentAnswer[k] == "\?") {
             }
             else {
