@@ -1,7 +1,7 @@
 /*
  * Updated by: Toshiki Yonezawa
  * Updated on: 05/01/2017
- * This program works to get a data from text file about education data for student, and then it calculates student gpa for current semester and overall gpa.
+ * This program works to get data from text file about education data for student, and then it calculates student gpa for current semester and overall gpa.
  * My techer gave three students grade data for testing, but I couldn't input and calculate the three persons" gpa same time, so user must input each person's data every time.
  * I'll keep practicing to update this program. For the next time, I want to input all data one time, and then output all data one time.
  */
