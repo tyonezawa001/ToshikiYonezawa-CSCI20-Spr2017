@@ -3,13 +3,38 @@
 #include <fstream>
 using namespace std;
 
+class gradeCalculator {
+    public:
+        void compareTwoArray(string answerkey, string studentAnswer, int i);
+    private:
+};
+
+void gradeCalculator::compareTwoArray(string answerkey, string studentAnswer, int i) {
+    for (i = 0; i < 18; i++) {
+        if (answerkey[i] == studentAnswer[i + 2]) {
+            cout << "Right!" << endl;
+        }
+        else if (answerkey[i] != studentAnswer[i + 2]) {
+            cout << "Wrong!";
+            if (studentAnswer[i + 2] != '?') {
+                cout << " Omitted Answer!" << endl;
+            }
+            else {
+                cout << "  lol" << endl;
+            }
+        }
+    }
+}
+
 int main() {
     ifstream inFS1;
     ifstream inFS2;
     ofstream outFS;
-    string answerkey[20];
+    string answerkey[18];
     string studentAnswer[20];
     int i = 0;
+    
+    gradeCalculator data;
     
     cout << endl;
     cout << "Opening file answerkey.txt..." << endl;
@@ -54,6 +79,25 @@ int main() {
         inFS2 >> studentAnswer[i];
         cout << studentAnswer[i] << endl;
     }
+
+    /*
+    for (i = 0; i < 18; i++) {
+        if (answerkey[i] == studentAnswer[i + 2]) {
+            cout << "Right!" << endl;
+        }
+        else if (answerkey[i] != studentAnswer[i + 2]) {
+            cout << "Wrong!";
+            if (studentAnswer[i + 2] != "?") {
+                cout << " Omitted Answer!" << endl;
+            }
+            else {
+                cout << "  lol" << endl;
+            }
+        }
+    }
+    */
+    
+    data.compareTwoArray(answerkey[18], studentAnswer[20], i);
     
     outFS << studentAnswer[0] << " " << studentAnswer[1] << endl;
     
