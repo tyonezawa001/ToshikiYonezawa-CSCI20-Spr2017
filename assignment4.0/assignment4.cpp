@@ -6,7 +6,9 @@ using namespace std;
 class gradeCalculator {
     public:
         void compareTwoArray(string answerkey[18], string studentAnswer[20], int i, int k, double score);
+        double GetScore() const;
     private:
+        double totalScore = 0.0;
 };
 
 void gradeCalculator::compareTwoArray(string answerkey[18], string studentAnswer[20], int i, int k, double score) {
@@ -23,7 +25,11 @@ void gradeCalculator::compareTwoArray(string answerkey[18], string studentAnswer
             }
         }
     }
-    cout << score << endl;
+    totalScore = score;
+}
+
+double gradeCalculator::GetScore() const {
+    return totalScore;
 }
 
 int main() {
@@ -71,7 +77,6 @@ int main() {
     
     cout << endl;
     cout << "Reading data..." << endl;
-    cout << endl;
     
     for (i = 0; i < 18; i++) {
         inFS1 >> answerkey[i];
@@ -83,8 +88,11 @@ int main() {
 
     data.compareTwoArray(answerkey, studentAnswer, i, k, score);
     
-    outFS << studentAnswer[0] << " " << studentAnswer[1] << endl;
-    outFS << score << endl;
+    outFS << endl;
+    outFS << "Student Name: " << studentAnswer[0] << " " << studentAnswer[1] << endl;
+    outFS << endl;
+    outFS << "Total Score: " << data.GetScore() << endl;
+    outFS << endl;
     
     cout << endl;
     cout << "Closing file answerkey.txt..." << endl;

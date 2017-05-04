@@ -1,2 +1,5 @@
-Christian Smith
-0
+
+Student Name: Christian Smith
+
+Total Score: 2.25
+
