@@ -5,28 +5,27 @@ using namespace std;
 
 class gradeCalculator {
     public:
-        void compareTwoArray(int i, int k);
+        void compareTwoArray(string answerkey[18], string studentAnswer[20], int i, int k, double score);
     private:
-    string answerkey[18];
-    string studentAnswer[20];
 };
 
-void gradeCalculator::compareTwoArray(int i, int k) {
+void gradeCalculator::compareTwoArray(string answerkey[18], string studentAnswer[20], int i, int k, double score) {
     for (i = 0; i < 18; i++) {
         k = i + 2;
         if (answerkey[i] == studentAnswer[k]) {
-            cout << "Right!" << endl;
+            score = score + 1.0;
+            cout << "Right! " << endl;
         }
         else if (answerkey[i] != studentAnswer[k]) {
-            cout << "Wrong!";
-            if (studentAnswer[k] == "?") {
-                cout << " Omitted Answer!" << endl;
+            cout << "Wrong!" << endl;
+            if (studentAnswer[k] == "\?") {
             }
             else {
-                cout << "  lol" << endl;
+                score = score - 0.25;
             }
         }
     }
+    cout << score << endl;
 }
 
 int main() {
@@ -37,6 +36,7 @@ int main() {
     string studentAnswer[20];
     int i = 0;
     int k = 0;
+    double score = 0.0;
     
     gradeCalculator data;
     
@@ -73,37 +73,20 @@ int main() {
     
     cout << endl;
     cout << "Reading data..." << endl;
+    cout << endl;
     
     for (i = 0; i < 18; i++) {
         inFS1 >> answerkey[i];
-        cout << answerkey[i] << endl;
     }
     
     for (i = 0; i < 20; i++) {
         inFS2 >> studentAnswer[i];
-        cout << studentAnswer[i] << endl;
     }
 
-    /*
-    for (i = 0; i < 18; i++) {
-        if (answerkey[i] == studentAnswer[i + 2]) {
-            cout << "Right!" << endl;
-        }
-        else if (answerkey[i] != studentAnswer[i + 2]) {
-            cout << "Wrong!";
-            if (studentAnswer[i + 2] != "?") {
-                cout << " Omitted Answer!" << endl;
-            }
-            else {
-                cout << "  lol" << endl;
-            }
-        }
-    }
-    */
-    
-    data.compareTwoArray(i, k);
+    data.compareTwoArray(answerkey, studentAnswer, i, k, score);
     
     outFS << studentAnswer[0] << " " << studentAnswer[1] << endl;
+    outFS << score << endl;
     
     cout << endl;
     cout << "Closing file answerkey.txt..." << endl;
