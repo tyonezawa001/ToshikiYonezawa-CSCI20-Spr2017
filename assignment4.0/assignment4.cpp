@@ -5,18 +5,21 @@ using namespace std;
 
 class gradeCalculator {
     public:
-        void compareTwoArray(string answerkey, string studentAnswer, int i);
+        void compareTwoArray(int i, int k);
     private:
+    string answerkey[18];
+    string studentAnswer[20];
 };
 
-void gradeCalculator::compareTwoArray(string answerkey, string studentAnswer, int i) {
+void gradeCalculator::compareTwoArray(int i, int k) {
     for (i = 0; i < 18; i++) {
-        if (answerkey[i] == studentAnswer[i + 2]) {
+        k = i + 2;
+        if (answerkey[i] == studentAnswer[k]) {
             cout << "Right!" << endl;
         }
-        else if (answerkey[i] != studentAnswer[i + 2]) {
+        else if (answerkey[i] != studentAnswer[k]) {
             cout << "Wrong!";
-            if (studentAnswer[i + 2] != '?') {
+            if (studentAnswer[k] == "?") {
                 cout << " Omitted Answer!" << endl;
             }
             else {
@@ -33,6 +36,7 @@ int main() {
     string answerkey[18];
     string studentAnswer[20];
     int i = 0;
+    int k = 0;
     
     gradeCalculator data;
     
@@ -97,7 +101,7 @@ int main() {
     }
     */
     
-    data.compareTwoArray(answerkey[18], studentAnswer[20], i);
+    data.compareTwoArray(i, k);
     
     outFS << studentAnswer[0] << " " << studentAnswer[1] << endl;
     
