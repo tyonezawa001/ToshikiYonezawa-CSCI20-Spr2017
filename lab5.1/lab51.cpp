@@ -1,3 +1,12 @@
+/*
+ *Updated by: Toshiki Yonezawa
+ *Updated on: 05/08/2017
+ *This program must work as researching a word which is palindrome or not.
+ *However, it has some errors now, so I'll try explaing how to work pointers in this program.
+ *In addition, I'll try what's the errors in this program.
+ *I didn't fix this prgram, so I just added comments if I think some lines are important.
+ */
+
 #include <iostream> 
 #include <iostream> 
 #include <cstring> 
@@ -5,7 +14,7 @@ using namespace std;
 
 int main() {
     int nameLength = 0;
-    char * name = new char[];
+    char * name = new char[]; // the line is wrong must be 
 
     cout << "Please enter a 10 letter word or less" << endl;
     cin >> name;
