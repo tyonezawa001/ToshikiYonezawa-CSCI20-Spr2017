@@ -1,6 +1,20 @@
 
-Student Name: Toshiki Yonezawa
+Student Name: Christian Smith
 
+This student got an incorrect on Question #1.
+This student got an incorrect on Question #2.
+This student got an incorrect on Question #3.
+This student got an incorrect on Question #4.
+This student got an incorrect on Question #6.
+This student got an incorrect on Question #7.
+This student got an incorrect on Question #8.
+This student got an incorrect on Question #10.
+This student got an incorrect on Question #11.
+This student got an incorrect on Question #12.
+This student got an incorrect on Question #13.
+This student got an incorrect on Question #14.
+This student got an incorrect on Question #17.
+This student got an incorrect on Question #18.
 
-Total Score: 18
+Total Score: 2.25
 

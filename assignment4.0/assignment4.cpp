@@ -247,6 +247,29 @@ int main() {
  *
  *Total Score: 2
  *
+ *Student Name: Johon Doe
+ *
+ *This student got an incorrect on Question #1.
+ *This student got an incorrect on Question #2.
+ *This student got an incorrect on Question #3.
+ *This student got an incorrect on Question #4.
+ *This student got an incorrect on Question #5.
+ *This student got an incorrect on Question #6.
+ *This student got an incorrect on Question #7.
+ *This student got an incorrect on Question #8.
+ *This student got an incorrect on Question #9.
+ *This student got an incorrect on Question #10.
+ *This student got an incorrect on Question #11.
+ *This student got an incorrect on Question #12.
+ *This student got an incorrect on Question #13.
+ *This student got an incorrect on Question #14.
+ *This student got an incorrect on Question #15.
+ *This student got an incorrect on Question #16.
+ *This student got an incorrect on Question #17.
+ *This student got an incorrect on Question #18.
+ *
+ *Total Score: 0
+ *
  *Student Name: Carrie Grant
  *
  *This student got an incorrect on Question #1.
