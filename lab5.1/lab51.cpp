@@ -14,7 +14,7 @@ using namespace std;
 
 int main() {
     int nameLength = 0;
-    char * name = new char[]; // the line is wrong be cause it must have a variable in the "[]" for initializing.
+    char *name = new char[namelenght]; // the line is wrong be cause it must have a variable in the "[]" for initializing.
 
     cout << "Please enter a 10 letter word or less" << endl;
     cin >> name;
