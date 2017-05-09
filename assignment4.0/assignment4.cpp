@@ -1,11 +1,12 @@
 /*
  *Created by: Toshiki Yonezawa
- *Created on:05/04/2017
+ *Created on:05/08/2017
  *This program works as a grade calculataor.
  *Prof. April Browne gave two text files, which are answerkey for quiz and student's answers, for input.
  *The program input data to two single array from the two text files.
  *After input data, the program compare the two array for calculating quiz score.
- *Finally the program outputs name, question numbers of incorrect answer, and total score to other text file. 
+ *Finally the program outputs name, question numbers of incorrect answer, and total score to other text file.
+ *It can calculate a grade for each student at same time.
  */
 
 #include <iostream>
@@ -64,7 +65,9 @@ int main() {
     int i = 0; // int variable for loop
     int j = 0; // int variable for loop
     int k = 0; // int variable for loop
+    int l = 0; // int variable for loop
     double score = 0.0; // double variable for score
+    int student = 6; // total numbers of student
     
     gradeCalculator data; // user-created object of class type gradeCalculator
     
@@ -103,38 +106,43 @@ int main() {
     cout << endl;
     cout << "Reading data..." << endl;
     
-    // for loop for input answerkey's data to single array
-    for (i = 0; i < 18; i++) {
-        inFS1 >> answerkey[i];
-    }
+    for (l = 0; l < student; l++) { // the number of loop depends on total numbers of student data. 
+        
+        // for loop for input answerkey's data to single array
+        for (i = 0; i < 18; i++) {
+            inFS1 >> answerkey[i];
+        }
     
-    // fr loop for input student's name and answers to single array
-    for (i = 0; i < 20; i++) {
-        inFS2 >> studentAnswer[i];
-    }
+        // fr loop for input student's name and answers to single array
+        for (i = 0; i < 20; i++) {
+            inFS2 >> studentAnswer[i];
+        }
     
-    // class function for comparing two single array
-    data.compareTwoArray(answerkey, studentAnswer, mistake, i, j, k, score);
+        // class function for comparing two single array
+        data.compareTwoArray(answerkey, studentAnswer, mistake, i, j, k, score);
     
-    outFS << endl;
-    outFS << "Student Name: " << studentAnswer[0] << " " << studentAnswer[1] << endl; // studentAnswer.txt contains student's name, so the sentence output the name to text file.
-    outFS << endl;
-    
-    // for loop for showing question number of incerrect answer
-    for (i = 0; i < data.GetMistake(); i++) {
-        outFS << "This student got an incorrect on Question #" << mistake[i] + 1 << "." << endl; // element of single array starts form 0, so I add 1 for output.
-    }
-    
-    // I decide if student got negative total score, the else if statement give student's score is 0 because negative total score doesn't make sense for me.
-    if (data.GetScore() > 0) { // if statement for positive total score
         outFS << endl;
-        outFS << "Total Score: " << data.GetScore() << endl; // output total score to text file
+        outFS << "Student Name: " << studentAnswer[0] << " " << studentAnswer[1] << endl; // studentAnswer.txt contains student's name, so the sentence output the name to text file.
         outFS << endl;
-    }
-    else if (data.GetScore() <= 0) { // else if statement for negative total score
+    
+        outFS << "This student got an incorrect on Question "; 
+        // for loop for showing question number of incerrect answer
+        for (i = 0; i < data.GetMistake(); i++) {
+            outFS << "#" << mistake[i] + 1 << ". "; // element of single array starts form 0, so I add 1 for output.
+        }
         outFS << endl;
-        outFS << "Total Score: 0" << endl; // output 0 socre to text file
-        outFS << endl;
+    
+        // I decide if student got negative total score, the else if statement give student's score is 0 because negative total score doesn't make sense for me.
+        if (data.GetScore() > 0) { // if statement for positive total score
+            outFS << endl;
+            outFS << "Total Score: " << data.GetScore() << endl; // output total score to text file
+            outFS << endl;
+        }
+        else if (data.GetScore() <= 0) { // else if statement for negative total score
+            outFS << endl;
+            outFS << "Total Score: 0" << endl; // output 0 socre to text file
+            outFS << endl;
+        }
     }
     
     // close each file
@@ -152,142 +160,44 @@ int main() {
 }
 
 /*
- *
  *Student Name: Christian Smith
  *
- *This student got an incorrect on Question #1.
- *This student got an incorrect on Question #2.
- *This student got an incorrect on Question #3.
- *This student got an incorrect on Question #4.
- *This student got an incorrect on Question #6.
- *This student got an incorrect on Question #7.
- *This student got an incorrect on Question #8.
- *This student got an incorrect on Question #10.
- *This student got an incorrect on Question #11.
- *This student got an incorrect on Question #12.
- *This student got an incorrect on Question #13.
- *This student got an incorrect on Question #14.
- *This student got an incorrect on Question #17.
- *This student got an incorrect on Question #18.
+ *This student got an incorrect on Question #1. #2. #3. #4. #6. #7. #8. #10. #11. #12. #13. #14. #17. #18. 
  *
  *Total Score: 2.25
  *
+ *
  *Student Name: Paxton Jones
  *
- *This student got an incorrect on Question #1.
- *This student got an incorrect on Question #2.
- *This student got an incorrect on Question #3.
- *This student got an incorrect on Question #5.
- *This student got an incorrect on Question #6.
- *This student got an incorrect on Question #7.
- *This student got an incorrect on Question #9.
- *This student got an incorrect on Question #10.
- *This student got an incorrect on Question #11.
- *This student got an incorrect on Question #13.
- *This student got an incorrect on Question #14.
- *This student got an incorrect on Question #15.
- *This student got an incorrect on Question #17.
+ *This student got an incorrect on Question #1. #2. #3. #5. #6. #7. #9. #10. #11. #13. #14. #15. #17. 
  *
  *Total Score: 2.75
  *
+ *
  *Student Name: Abby Sciuto
  *
- *This student got an incorrect on Question #1.
- *This student got an incorrect on Question #2.
- *This student got an incorrect on Question #3.
- *This student got an incorrect on Question #4.
- *This student got an incorrect on Question #5.
- *This student got an incorrect on Question #7.
- *This student got an incorrect on Question #8.
- *This student got an incorrect on Question #9.
- *This student got an incorrect on Question #10.
- *This student got an incorrect on Question #12.
- *This student got an incorrect on Question #13.
- *This student got an incorrect on Question #16.
+ *This student got an incorrect on Question #1. #2. #3. #4. #5. #7. #8. #9. #10. #12. #13. #16. 
  *
  *Total Score: 4
  *
+ *
  *Student Name: Audrey Smithson
  *
- *This student got an incorrect on Question #1.
- *This student got an incorrect on Question #3.
- *This student got an incorrect on Question #4.
- *This student got an incorrect on Question #5.
- *This student got an incorrect on Question #6.
- *This student got an incorrect on Question #7.
- *This student got an incorrect on Question #8.
- *This student got an incorrect on Question #9.
- *This student got an incorrect on Question #10.
- *This student got an incorrect on Question #12.
- *This student got an incorrect on Question #13.
- *This student got an incorrect on Question #14.
- *This student got an incorrect on Question #15.
- *This student got an incorrect on Question #16.
- *This student got an incorrect on Question #17.
- *This student got an incorrect on Question #18.
- *
- *Total Score: 0 (The real total score was -0.75)
- *
- *Student Name: Katie Holmes
- *
- *This student got an incorrect on Question #1.
- *This student got an incorrect on Question #2.
- *This student got an incorrect on Question #3.
- *This student got an incorrect on Question #4.
- *This student got an incorrect on Question #5.
- *This student got an incorrect on Question #6.
- *This student got an incorrect on Question #7.
- *This student got an incorrect on Question #8.
- *This student got an incorrect on Question #9.
- *This student got an incorrect on Question #10.
- *This student got an incorrect on Question #14.
- *This student got an incorrect on Question #15.
- *This student got an incorrect on Question #17.
- *This student got an incorrect on Question #18.
- *
- *Total Score: 2
- *
- *Student Name: Johon Doe
- *
- *This student got an incorrect on Question #1.
- *This student got an incorrect on Question #2.
- *This student got an incorrect on Question #3.
- *This student got an incorrect on Question #4.
- *This student got an incorrect on Question #5.
- *This student got an incorrect on Question #6.
- *This student got an incorrect on Question #7.
- *This student got an incorrect on Question #8.
- *This student got an incorrect on Question #9.
- *This student got an incorrect on Question #10.
- *This student got an incorrect on Question #11.
- *This student got an incorrect on Question #12.
- *This student got an incorrect on Question #13.
- *This student got an incorrect on Question #14.
- *This student got an incorrect on Question #15.
- *This student got an incorrect on Question #16.
- *This student got an incorrect on Question #17.
- *This student got an incorrect on Question #18.
+ *This student got an incorrect on Question #1. #3. #4. #5. #6. #7. #8. #9. #10. #12. #13. #14. #15. #16. #17. #18. 
  *
  *Total Score: 0
  *
+ *
+ *Student Name: Katie Holmes
+ * 
+ *This student got an incorrect on Question #1. #2. #3. #4. #5. #6. #7. #8. #9. #10. #14. #15. #17. #18. 
+ *
+ *Total Score: 2
+ *
+ *
  *Student Name: Carrie Grant
  *
- *This student got an incorrect on Question #1.
- *This student got an incorrect on Question #2.
- *This student got an incorrect on Question #3.
- *This student got an incorrect on Question #6.
- *This student got an incorrect on Question #7.
- *This student got an incorrect on Question #8.
- *This student got an incorrect on Question #11.
- *This student got an incorrect on Question #12.
- *This student got an incorrect on Question #16.
- *This student got an incorrect on Question #17.
- *This student got an incorrect on Question #18.
+ *This student got an incorrect on Question #1. #2. #3. #6. #7. #8. #11. #12. #16. #17. #18. 
  *
  *Total Score: 5
- *
- *Student Name: Toshiki Yonezawa
- *
- *
- *Total Score: 18
  */
