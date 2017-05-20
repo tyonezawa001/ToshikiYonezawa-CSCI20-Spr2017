@@ -1,3 +1,10 @@
+/*
+ *Created by: Toshiki Yonezawa
+ *Created on: 05/20/2017
+ *
+ */
+
+
 #include <iostream>
 #include <string>
 #include <fstream>
