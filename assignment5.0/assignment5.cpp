@@ -1,7 +1,12 @@
 /*
  *Created by: Toshiki Yonezawa
  *Created on: 05/20/2017
- *
+ *For my final project, I created a game which calls "Tic-tac-toe".
+ *The main program input gameboard fro text file for playing game, and it outputs the gameresult to other file.
+ *This gmae is for 1 player. It imeans user plays the game with computer player.
+ *The game player can choose a first moving or a seconed moving for the beginning.
+ *After the game ends, the game player can cntinue to next game if the player wants to play more.
+ *The computer player choose places using random alphabet generator, so user player can't choose the difficulty of the game.
  */
 
 
@@ -12,16 +17,18 @@
 #include <ctime>
 using namespace std;
 
-class SearchWinner {
+// class statement for searching winner for the game, resetting gameboard and result, and giving result to main statement 
+class GameFunction {
     public:
-        void checkCells(string gameBoard[7][7], string user, string CPU);
-        void resetGame(string gameBoard[7][7]);
-        string getResult() const;
+        void checkCells(string gameBoard[7][7], string user, string CPU); // class function for searching winner 
+        void resetGame(string gameBoard[7][7]); // class function for resetting the game
+        string getResult() const; // class function for giving result to main statement
     private:
-        string result;
+        string result; // variable for storing result
 };
 
-void SearchWinner::checkCells(string gameBoard[7][7], string user, string CPU) {
+// class function for searching winner, and output result the game to class get function
+void GameFunction::checkCells(string gameBoard[7][7], string user, string CPU) {
     if ((gameBoard[1][1] == gameBoard[1][3]) && (gameBoard[1][1] == gameBoard[1][5])) {
         if (gameBoard[1][1] == user) {
             result = "winner";
@@ -91,7 +98,8 @@ void SearchWinner::checkCells(string gameBoard[7][7], string user, string CPU) {
     }
 }
 
-void SearchWinner::resetGame(string gameBoard[7][7]) {
+// class function for resetting gameboard and game result 
+void GameFunction::resetGame(string gameBoard[7][7]) {
     gameBoard[1][1] = "a";
     gameBoard[1][3] = "b";
     gameBoard[1][5] = "c";
@@ -104,16 +112,18 @@ void SearchWinner::resetGame(string gameBoard[7][7]) {
     result = "reset";
 }
 
-string SearchWinner::getResult() const {
+// class get function to give game result to main statement
+string GameFunction::getResult() const {
     return result;
 }
 
+// main statement for the game
 int main() {
     string continuation;
-    ifstream inFS;
-    ofstream outFS;
-    string gameBoard[7][7];
-    string firstOrSecond;
+    ifstream inFS; // input file stream
+    ofstream outFS; // output file stream
+    string gameBoard[7][7]; // multiple array for gameboard
+    string firstOrSecond; 
     string user;
     string CPU;
     string choose;
@@ -124,14 +134,13 @@ int main() {
     char ascii;
     string str;
     string loop;
-    string cell;
     
-    SearchWinner game;
+    GameFunction game; // user-created object of class type GameFunction
     
     cout << endl;
     cout << "Opening file boardForGame.txt..." << endl;
     
-    // open text files for input data to two single array
+    // open text files for input data to multiple array
     inFS.open("boardForGame.txt");
     if (!inFS.is_open()) { // if the program cannot open this file, the program will stop to work.
         cout << endl;
@@ -154,22 +163,25 @@ int main() {
     cout << "Reading data..." << endl;
     cout << endl;
     
+    // the game continues if player want to play again
     while ((continuation != "n") && (continuation != "no") && (continuation != "No") && (continuation != "NO")) {
         
+        // input gameboard from text file
         for (i = 0; i < 7; i++) {
             for (j = 0; j < 7; j++) {
                 inFS >> gameBoard[i][j];
             }
         }
         
+        // the class function statements need for reset the gameboard and the output of gam.getResult().
         game.resetGame(gameBoard);
-        game.getResult();
         
         cout << "Do you want to take the first move 'O' or the second move 'X'?" << endl;
         cout << "Your choice (O/X): ";
         cin >> firstOrSecond;
         cout << endl;
         
+        // user player choose first movement or seconed movement
         if ((firstOrSecond == "O") || (firstOrSecond == "o")) {
             user = "O";
             CPU = "X";
@@ -179,10 +191,12 @@ int main() {
             CPU = "O";
         }
         
-        srand(time(0));
+        srand(time(0)); // this statement for tandom alphabet generator
         
+        // this loop continues until game.getResult() outputs "winner", "loser", and "draw".
         while ((game.getResult() != "winner") && (game.getResult() != "loser") && (game.getResult() != "draw")) {
-            if (user == "O") {
+            
+            if (user == "O") { // the loop wprks when user chooses "O"
                 cout << endl;
                 cout << "User: the first move 'O'" << endl;
                 cout << "CPU: the second move 'X'" << endl;
@@ -205,6 +219,7 @@ int main() {
                     }
                 }
                 
+                // searcing winner
                 game.checkCells(gameBoard, user, CPU);
                 game.getResult();
                 
@@ -215,11 +230,16 @@ int main() {
                         }
                         cout << endl;
                     }
+                    
+                    // searching winner
+                    game.checkCells(gameBoard, user, CPU);
+                    game.getResult();
                 }
                 else {
                     while (loop != "Go") {
+                        // random alphabet generator
                         ascii = ((rand() % (105 - 97 + 1)) + 97);
-                        str = ascii;
+                        str = ascii; // char coverts to string variable
                         for (i = 0; i < 7; i++) {
                             for (j = 0; j < 7; j++) {
                                 if (gameBoard[i][j] == str) {
@@ -229,15 +249,19 @@ int main() {
                             }   
                         }
                     }
-                    loop = "Again";
+                    loop = "Again"; // initialize variable for loop 
                 }
+                
+                // searching winner
                 game.checkCells(gameBoard, user, CPU);
                 game.getResult();
             }
-            else if (user == "X") {
+            
+            else if (user == "X") { // the loop wprks when user chooses "X"
                 while (loop != "Go") {
+                    // random alphabet generator
                     ascii = ((rand() % (105 - 97 + 1)) + 97);
-                    str = ascii;
+                    str = ascii; // char converts to string variable
                     for (i = 0; i < 7; i++) {
                         for (j = 0; j < 7; j++) {
                             if (gameBoard[i][j] == str) {
@@ -247,8 +271,9 @@ int main() {
                         }   
                     }
                 }
-                loop = "Again";
+                loop = "Again"; // intitialize variable for loop
                 
+                // searching winner
                 game.checkCells(gameBoard, user, CPU);
                 game.getResult();
                 
@@ -262,22 +287,33 @@ int main() {
                     cout << endl;
                 }
                 
-                cout << endl;
-                cout << "Please choose place (a to i) which you want to put 'X' in the board." << endl;
-                cout << "Your choice (a to i): ";
-                cin >> choose;
-                for (i = 0; i < 7; i++) {
-                    for (j = 0; j < 7; j++) {
-                        if (gameBoard[i][j] == choose){
-                            gameBoard[i][j] = "X";
+                if ((gameBoard[1][1] != "a") && (gameBoard[1][3] != "b") && (gameBoard[1][5] != "c") && (gameBoard[3][1] != "d") && (gameBoard[3][3] != "e") && (gameBoard[3][5] != "f") && (gameBoard[5][1] != "g") && (gameBoard[5][3] != "h") && (gameBoard[5][5] != "i")) {
+                    
+                    // searching winner
+                    game.checkCells(gameBoard, user, CPU);
+                    game.getResult();
+                }
+                else {
+                    cout << endl;
+                    cout << "Please choose place (a to i) which you want to put 'X' in the board." << endl;
+                    cout << "Your choice (a to i): ";
+                    cin >> choose;
+                    for (i = 0; i < 7; i++) {
+                        for (j = 0; j < 7; j++) {
+                            if (gameBoard[i][j] == choose){
+                                gameBoard[i][j] = "X";
+                            }
                         }
                     }
                 }
+                
+                // searching winner
                 game.checkCells(gameBoard, user, CPU);
                 game.getResult();
             }
         }
         
+        // show the result of game
         if (game.getResult() == "winner") {
             cout << endl;
             cout << "User is Winner!" << endl;
@@ -293,7 +329,8 @@ int main() {
             cout << "The game ended in draw." << endl;
             cout << endl;
         }
-
+        
+        // output results to other text file
         outFS << endl;
         outFS << "Game #" << k + 1 << endl;
         
