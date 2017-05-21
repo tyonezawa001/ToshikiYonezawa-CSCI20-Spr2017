@@ -2,8 +2,8 @@
  *Created by: Toshiki Yonezawa
  *Created on: 05/20/2017
  *For my final project, I created a game which calls "Tic-tac-toe".
- *The main program input gameboard fro text file for playing game, and it outputs the gameresult to other file.
- *This gmae is for 1 player. It imeans user plays the game with computer player.
+ *The main program input gameboard from text file for playing game, and it outputs the game result and ttal numbers of game to other file.
+ *This gmae is for 1 player. It means user plays the game with computer player.
  *The game player can choose a first moving or a seconed moving for the beginning.
  *After the game ends, the game player can cntinue to next game if the player wants to play more.
  *The computer player choose places using random alphabet generator, so user player can't choose the difficulty of the game.
@@ -29,7 +29,7 @@ class GameFunction {
 
 // class function for searching winner, and output result the game to class get function
 void GameFunction::checkCells(string gameBoard[7][7], string user, string CPU) {
-    if ((gameBoard[1][1] == gameBoard[1][3]) && (gameBoard[1][1] == gameBoard[1][5])) {
+    if ((gameBoard[1][1] == gameBoard[1][3]) && (gameBoard[1][1] == gameBoard[1][5]) && (gameBoard[1][3] == gameBoard[1][5])) {
         if (gameBoard[1][1] == user) {
             result = "winner";
         }
@@ -37,7 +37,7 @@ void GameFunction::checkCells(string gameBoard[7][7], string user, string CPU) {
             result = "loser";
         }
     }
-    else if ((gameBoard[3][1] == gameBoard[3][3]) && (gameBoard[3][1] == gameBoard[3][5])) {
+    else if ((gameBoard[3][1] == gameBoard[3][3]) && (gameBoard[3][1] == gameBoard[3][5]) && (gameBoard[3][3] == gameBoard[3][5])) {
         if (gameBoard[3][1] == user) {
             result = "winner";
         }
@@ -45,7 +45,7 @@ void GameFunction::checkCells(string gameBoard[7][7], string user, string CPU) {
             result = "loser";
         }
     }
-    else if ((gameBoard[5][1] == gameBoard[5][3]) && (gameBoard[5][1] == gameBoard[5][5])) {
+    else if ((gameBoard[5][1] == gameBoard[5][3]) && (gameBoard[5][1] == gameBoard[5][5]) && (gameBoard[5][3] == gameBoard[5][5])) {
         if (gameBoard[5][1] == user) {
             result = "winner";
         }
@@ -53,7 +53,7 @@ void GameFunction::checkCells(string gameBoard[7][7], string user, string CPU) {
             result = "loser";
         }
     }
-    else if ((gameBoard[1][1] == gameBoard[3][1]) && (gameBoard[1][1] == gameBoard[5][1])) {
+    else if ((gameBoard[1][1] == gameBoard[3][1]) && (gameBoard[1][1] == gameBoard[5][1]) && (gameBoard[3][1] == gameBoard[5][1])) {
         if (gameBoard[1][1] == user) {
             result = "winner";
         }
@@ -61,7 +61,7 @@ void GameFunction::checkCells(string gameBoard[7][7], string user, string CPU) {
             result = "loser";
         }
     }
-    else if ((gameBoard[1][3] == gameBoard[3][3]) && (gameBoard[1][3] == gameBoard[5][3])) {
+    else if ((gameBoard[1][3] == gameBoard[3][3]) && (gameBoard[1][3] == gameBoard[5][3]) && (gameBoard[3][3] == gameBoard[5][3])) {
         if (gameBoard[1][3] == user) {
             result = "winner";
         }
@@ -69,7 +69,7 @@ void GameFunction::checkCells(string gameBoard[7][7], string user, string CPU) {
             result = "loser";
         }
     }
-    else if ((gameBoard[1][5] == gameBoard[3][5]) && (gameBoard[1][5] == gameBoard[5][5])) {
+    else if ((gameBoard[1][5] == gameBoard[3][5]) && (gameBoard[1][5] == gameBoard[5][5]) && (gameBoard[3][5] == gameBoard[5][5])) {
         if (gameBoard[1][5] == user) {
             result = "winner";
         }
@@ -77,7 +77,7 @@ void GameFunction::checkCells(string gameBoard[7][7], string user, string CPU) {
             result = "loser";
         }
     }
-    else if ((gameBoard[1][1] == gameBoard[3][3]) && (gameBoard[1][1] == gameBoard[5][5])) {
+    else if ((gameBoard[1][1] == gameBoard[3][3]) && (gameBoard[1][1] == gameBoard[5][5]) && (gameBoard[3][3] == gameBoard[5][5])) {
         if (gameBoard[1][1] == user) {
             result = "winner";
         }
@@ -85,7 +85,7 @@ void GameFunction::checkCells(string gameBoard[7][7], string user, string CPU) {
             result = "loser";
         }
     }
-    else if ((gameBoard[5][1] == gameBoard[3][3]) && (gameBoard[5][1] == gameBoard[1][5])) {
+    else if ((gameBoard[5][1] == gameBoard[3][3]) && (gameBoard[5][1] == gameBoard[1][5]) && (gameBoard[3][3] == gameBoard[1][5])) {
         if (gameBoard[5][1] == user) {
             result = "winner";
         }
@@ -271,7 +271,8 @@ int main() {
                         }   
                     }
                 }
-                loop = "Again"; // intitialize variable for loop
+                loop = "Again";
+                 // intitialize variable for loop
                 
                 // searching winner
                 game.checkCells(gameBoard, user, CPU);
