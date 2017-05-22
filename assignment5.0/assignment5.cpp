@@ -176,10 +176,19 @@ int main() {
         // the class function statements need for reset the gameboard and the output of gam.getResult().
         game.resetGame(gameBoard);
         
+        
         cout << "Do you want to take the first move 'O' or the second move 'X'?" << endl;
         cout << "Your choice (O/X): ";
         cin >> firstOrSecond;
         cout << endl;
+        
+        // If user make a mistake for choosing movement, the loop shows to screem.
+        while (firstOrSecond != "o" && firstOrSecond != "O" && firstOrSecond != "x" && firstOrSecond != "X") {
+            cout << "Please choose 'o' or 'x' for the movement." << endl;
+            cout << "Your choice (O/X): ";
+            cin >> firstOrSecond;
+            cout << endl;
+        }
         
         // user player choose first movement or seconed movement
         if ((firstOrSecond == "O") || (firstOrSecond == "o")) {
@@ -354,6 +363,8 @@ int main() {
             outFS << "CPU (" << CPU << "): Winner!" << endl;
         } 
         else if (game.getResult() == "draw") {
+            outFS << "User (" << user << ")" <<endl;
+            outFS << "CPU (" << CPU << ")" << endl;
             outFS << "The game ended in draw." << endl;
         }
         k++;
@@ -362,6 +373,13 @@ int main() {
         cout << "Your choice (y/n): ";
         cin >> continuation;
         cout << endl;
+        
+        while (continuation != "y" && continuation != "Y" && continuation != "n" && continuation != "N") {
+            cout << "Please type 'y' or 'n' for checking continuation." << endl;
+            cout << "Your choice (y/n): ";
+            cin >> continuation;
+            cout << endl;
+        }
     }
     
     // close each file
