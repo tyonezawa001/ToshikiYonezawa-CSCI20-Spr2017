@@ -1,12 +1,22 @@
 
 Game #1
 -------
-|X|O|X|
--------
-|X|O|O|
--------
 |O|X|O|
 -------
-User (O)
-CPU (X)
-The game ended in draw.
+|X|X|O|
+-------
+|g|O|O|
+-------
+User (X): Loser!
+CPU (O): Winner!
+
+Game #2
+-------
+|O|O|O|
+-------
+|d|X|f|
+-------
+|X|h|X|
+-------
+User (O): Winner!
+CPU (X): Loser!

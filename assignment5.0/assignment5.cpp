@@ -9,7 +9,6 @@
  *The computer player choose places using random alphabet generator, so user player can't choose the difficulty of the game.
  */
 
-
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -232,7 +231,7 @@ int main() {
                 game.checkCells(gameBoard, user, CPU);
                 game.getResult();
                 
-                if ((gameBoard[1][1] != "a") && (gameBoard[1][3] != "b") && (gameBoard[1][5] != "c") && (gameBoard[3][1] != "d") && (gameBoard[3][3] != "e") && (gameBoard[3][5] != "f") && (gameBoard[5][1] != "g") && (gameBoard[5][3] != "h") && (gameBoard[5][5] != "i")) {
+                if (game.getResult() == "winner" && game.getResult() == "loser" && game.getResult() == "draw") {
                     for (i = 0; i < 7; i++) {
                         for (j = 0; j < 7; j++) {
                             cout << gameBoard[i][j];
@@ -297,13 +296,13 @@ int main() {
                     cout << endl;
                 }
                 
-                if ((gameBoard[1][1] != "a") && (gameBoard[1][3] != "b") && (gameBoard[1][5] != "c") && (gameBoard[3][1] != "d") && (gameBoard[3][3] != "e") && (gameBoard[3][5] != "f") && (gameBoard[5][1] != "g") && (gameBoard[5][3] != "h") && (gameBoard[5][5] != "i")) {
+                if (game.getResult() == "winner" && game.getResult() == "loser" && game.getResult() == "draw") {
                     
                     // searching winner
                     game.checkCells(gameBoard, user, CPU);
                     game.getResult();
                 }
-                else {
+                else if (game.getResult() != "winner" && game.getResult() != "loser" && game.getResult() != "draw") {
                     cout << endl;
                     cout << "Please choose place (a to i) which you want to put 'X' in the board." << endl;
                     cout << "Your choice (a to i): ";
