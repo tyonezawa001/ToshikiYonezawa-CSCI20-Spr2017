@@ -122,17 +122,17 @@ int main() {
     ifstream inFS; // input file stream
     ofstream outFS; // output file stream
     string gameBoard[7][7]; // multiple array for gameboard
-    string firstOrSecond; 
-    string user;
-    string CPU;
-    string choose;
-    int i = 0;
-    int j = 0;
-    int k = 0;
-    int l = 0;
-    char ascii;
-    string str;
-    string loop;
+    string firstOrSecond; // string variable for choosing first movement or seconed movement
+    string user; // string variable for cheking movement for user
+    string CPU; // string variable for chking movement for computer player
+    string choose; // the string variable for storing user choosing place 
+    int i = 0; // it is for loop
+    int j = 0; // it is for loop
+    int k = 0; // it is for loop
+    int l = 0; // it is for loop
+    char ascii; // char variable for random alphabet generator 
+    string str; // convert to the string variable from char variable
+    string loop; // string varibale for finding a different place with user player. It is for computer player
     
     GameFunction game; // user-created object of class type GameFunction
     
@@ -165,7 +165,7 @@ int main() {
     // the game continues if player want to play again
     while ((continuation != "n") && (continuation != "no") && (continuation != "No") && (continuation != "NO")) {
         
-        // input gameboard from text file
+        // input gameboard from text file to multiple array
         for (i = 0; i < 7; i++) {
             for (j = 0; j < 7; j++) {
                 inFS >> gameBoard[i][j];
@@ -205,6 +205,8 @@ int main() {
         while ((game.getResult() != "winner") && (game.getResult() != "loser") && (game.getResult() != "draw")) {
             
             if (user == "O") { // the loop wprks when user chooses "O"
+                
+                // showing the game board on screen
                 cout << endl;
                 cout << "User: the first move 'O'" << endl;
                 cout << "CPU: the second move 'X'" << endl;
@@ -215,6 +217,7 @@ int main() {
                     cout << endl;
                 }
                 
+                // choosing place by user
                 cout << endl;
                 cout << "Please choose place (a to i) which you want to put 'O' in the board." << endl;
                 cout << "Your choice (a to i): ";
@@ -231,6 +234,7 @@ int main() {
                 game.checkCells(gameBoard, user, CPU);
                 game.getResult();
                 
+                // if already game ends, the cmputer player cann't choose place more
                 if (game.getResult() == "winner" && game.getResult() == "loser" && game.getResult() == "draw") {
                     for (i = 0; i < 7; i++) {
                         for (j = 0; j < 7; j++) {
@@ -286,6 +290,7 @@ int main() {
                 game.checkCells(gameBoard, user, CPU);
                 game.getResult();
                 
+                // showing the game board on the screem
                 cout << endl;
                 cout << "CPU: the first move 'O'" << endl;
                 cout << "User: the second move 'X'" << endl;
@@ -296,6 +301,7 @@ int main() {
                     cout << endl;
                 }
                 
+                // if aready game ends, the user can't choose place more
                 if (game.getResult() == "winner" && game.getResult() == "loser" && game.getResult() == "draw") {
                     
                     // searching winner
@@ -303,6 +309,8 @@ int main() {
                     game.getResult();
                 }
                 else if (game.getResult() != "winner" && game.getResult() != "loser" && game.getResult() != "draw") {
+                    
+                    // choose place by user
                     cout << endl;
                     cout << "Please choose place (a to i) which you want to put 'X' in the board." << endl;
                     cout << "Your choice (a to i): ";
@@ -314,11 +322,11 @@ int main() {
                             }
                         }
                     }
-                }
                 
-                // searching winner
-                game.checkCells(gameBoard, user, CPU);
-                game.getResult();
+                    // searching winner
+                    game.checkCells(gameBoard, user, CPU);
+                    game.getResult();
+                }
             }
         }
         

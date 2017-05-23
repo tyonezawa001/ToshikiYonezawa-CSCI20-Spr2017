@@ -1,56 +1,11 @@
-
+ 
 Game #1
 -------
-|O|X|O|
+|O|O|X|
 -------
 |X|X|O|
 -------
-|O|X|i|
--------
-User (O): Loser!
-CPU (X): Winner!
-
-Game #2
--------
 |O|X|O|
--------
-|O|X|X|
--------
-|X|O|O|
--------
-User (O)
-CPU (X)
-The game ended in draw.
-
-Game #3
--------
-|X|b|X|
--------
-|X|O|O|
--------
-|X|O|O|
--------
-User (X): Winner!
-CPU (O): Loser!
-
-Game #4
--------
-|X|O|O|
--------
-|X|O|O|
--------
-|O|X|X|
--------
-User (X): Loser!
-CPU (O): Winner!
-
-Game #5
--------
-|O|X|O|
--------
-|X|O|X|
--------
-|X|O|X|
 -------
 User (O)
 CPU (X)
