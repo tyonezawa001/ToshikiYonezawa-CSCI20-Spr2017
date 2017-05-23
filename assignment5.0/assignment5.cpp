@@ -243,7 +243,7 @@ int main() {
                     game.checkCells(gameBoard, user, CPU);
                     game.getResult();
                 }
-                else {
+                else if (game.getResult() != "winner" && game.getResult() != "loser" && game.getResult() != "draw") {
                     while (loop != "Go") {
                         // random alphabet generator
                         ascii = ((rand() % (105 - 97 + 1)) + 97);
